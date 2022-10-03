@@ -1,0 +1,22 @@
+.favorite-animal {
+  
+  background: center bottom no-repeat url("../../images/Giant_Panda_favorite_animal.png"), linear-gradient(90deg, rgba(73,76,77,1) 0%, rgba(237,237,237,1) 40%, rgba(237,237,237,1) 60%, rgba(191,178,163,1) 100%);
+  background-size: cover;
+  @include xl {
+    height: 780px;
+    // margin-top: -80px;
+  }
+  @include lg {
+    height: 584px;
+    // margin-top: -80px;
+  }
+  @include md {
+    height: 373px;
+    // margin-top: -34px;
+  }
+  @include sm {
+    height: 187px;
+    margin-top: 34px;
+  }
+
+}

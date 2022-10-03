@@ -1,0 +1,15 @@
+footer {
+  background: #111115;
+  @include xl {
+    height: 443px;
+  }
+  @include lg {
+    height: 443px;
+  }
+  @include md {
+    height: 282px;
+  }
+  @include sm {
+    height: 334px;
+  }
+}

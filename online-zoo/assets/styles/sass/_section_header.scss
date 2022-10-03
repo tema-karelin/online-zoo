@@ -1,0 +1,17 @@
+header {
+  position: absolute;
+  background: #000;
+  @include xl {
+    height: 80px;
+  }
+  @include lg {
+    height: 80px;
+  }
+  @include md {
+    height: 34px;
+  }
+  @include sm {
+    top: 0;
+    height: 34px;
+  }
+}

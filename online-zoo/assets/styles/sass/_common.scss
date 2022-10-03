@@ -1,0 +1,36 @@
+body {
+  background-color: #FFF;
+
+  &::-webkit-scrollbar { 
+    width: 0;
+  }
+
+  >* {
+    width: 100vw;
+    div {
+      max-width: $guides_width;
+    }
+  }
+}
+
+
+@mixin xl {
+  @media (min-width: $xl) {
+    @content
+  }
+};
+@mixin lg {
+  @media (min-width: $lg) and  (max-width: ($xl - 1px)) {
+    @content
+  }
+};
+@mixin md {
+  @media (min-width: $md) and  (max-width: ($lg - 1px)) {
+    @content
+  }
+};
+@mixin sm {
+  @media (max-width: ($md - 1px)) {
+    @content
+  }
+};

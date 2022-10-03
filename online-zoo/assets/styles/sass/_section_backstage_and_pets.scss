@@ -1,0 +1,14 @@
+.backstage-and-pets {
+  @include xl {
+    height: 1829px;
+  }
+  @include lg {
+    height: 1744px;
+  }
+  @include md {
+    height: 1477px;
+  }
+  @include sm {
+    height: 2054px;
+  }
+}

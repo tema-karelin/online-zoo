@@ -1,0 +1,14 @@
+.testimonials {
+  @include xl {
+    height: 919px;
+  }
+  @include lg {
+    height: 842px;
+  }
+  @include md {
+    height: 668px;
+  }
+  @include sm {
+    height: 580px;
+  }
+}
