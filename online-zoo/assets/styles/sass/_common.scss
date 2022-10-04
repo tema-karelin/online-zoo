@@ -1,6 +1,17 @@
+@mixin font_global {
+  font-family: 'Roboto', Arial, Helvetica;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #333B41;
+}
+
 body {
   background-color: #FFF;
 
+  @include font_global();
+  
   &::-webkit-scrollbar { 
     width: 0;
   }
@@ -8,6 +19,7 @@ body {
   >* {
     width: 100vw;
     div {
+      width: 100%;
       max-width: $guides_width;
     }
   }

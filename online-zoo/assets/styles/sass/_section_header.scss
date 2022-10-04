@@ -1,6 +1,61 @@
 header {
   position: absolute;
   background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-weight: 500;
+      line-height: 140%;
+
+      &.active {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #F9804B;
+      }
+
+      &.logo {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 82px;
+        height: 52px;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+
+        .logo-text {
+          font-size: 19px;
+          font-weight: 300;
+          line-height: 120%;
+          text-align: center;
+          margin: 3px 0 0 0;
+
+          span:before {
+            content: url(../../icons/bamboo.svg);
+            // position: absolute;
+            bottom: 3px;
+            left: 5px;
+          }
+        }
+
+      }
+    }
+
+    
+    
+  }
+
+
+
   @include xl {
     height: 80px;
   }

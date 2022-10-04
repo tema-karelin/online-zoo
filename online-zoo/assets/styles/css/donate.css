@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -307,8 +307,19 @@ template {
   display: none;
 }
 
+a, a:active, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   background-color: #FFF;
+  font-family: "Roboto", Arial, Helvetica;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #333B41;
 }
 body::-webkit-scrollbar {
   width: 0;
@@ -317,12 +328,54 @@ body > * {
   width: 100vw;
 }
 body > * div {
+  width: 100%;
   max-width: 1160px;
 }
 
 header {
   position: absolute;
   background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  font-weight: 500;
+  line-height: 140%;
+}
+header nav a.active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #F9804B;
+}
+header nav a.logo {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+}
+header nav a.logo .logo-text {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 120%;
+  text-align: center;
+  margin: 3px 0 0 0;
+}
+header nav a.logo .logo-text span:before {
+  content: url(../../icons/bamboo.svg);
+  bottom: 3px;
+  left: 5px;
 }
 @media (min-width: 1600px) {
   header {
