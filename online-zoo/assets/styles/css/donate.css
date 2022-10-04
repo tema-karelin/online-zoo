@@ -325,16 +325,29 @@ body::-webkit-scrollbar {
   width: 0;
 }
 body > * {
+  box-sizing: border-box;
   width: 100vw;
+  min-width: 320px;
+  padding: 0 30px;
 }
 body > * div {
   width: 100%;
   max-width: 1160px;
 }
+@media (min-width: 321px) and (max-width: 640px) {
+  body > * {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  body > * {
+    padding: 0 10px;
+  }
+}
 
 header {
   position: absolute;
-  background: #000;
+  background: #111115;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,6 +362,16 @@ header nav a {
   font-weight: 500;
   line-height: 140%;
 }
+@media (min-width: 321px) and (max-width: 640px) {
+  header nav a {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  header nav a {
+    display: none;
+  }
+}
 header nav a.active {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   -webkit-background-clip: text;
@@ -357,42 +380,109 @@ header nav a.active {
 }
 header nav a.logo {
   box-sizing: border-box;
+  width: 82px;
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 82px;
-  height: 52px;
+  margin: 0 5px 0 0;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
+  background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  header nav a.logo {
+    margin: 0 15px 0 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  header nav a.logo {
+    width: 47px;
+    height: 30px;
+    border: none;
+    background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  header nav a.logo {
+    width: 47px;
+    height: 30px;
+    border: none;
+    background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+  }
 }
 header nav a.logo .logo-text {
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 120%;
   text-align: center;
-  margin: 3px 0 0 0;
+  margin: 2px 0 0 0;
 }
-header nav a.logo .logo-text span:before {
-  content: url(../../icons/bamboo.svg);
-  bottom: 3px;
-  left: 5px;
+@media (min-width: 321px) and (max-width: 640px) {
+  header nav a.logo .logo-text {
+    font-size: 12px;
+  }
 }
-@media (min-width: 1600px) {
+@media (min-width: 0px) and (max-width: 320px) {
+  header nav a.logo .logo-text {
+    font-size: 12px;
+  }
+}
+header nav a:last-child {
+  flex-basis: 42%;
+  text-align: right;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  header nav a:last-child {
+    flex-basis: 33.5%;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  header nav a:last-child {
+    flex-basis: 33.5%;
+  }
+}
+header nav .burger {
+  width: 18px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px;
+  margin-right: -6px;
+}
+@media (min-width: 1001px) {
+  header nav .burger {
+    display: none;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  header nav .burger {
+    display: none;
+  }
+}
+header nav .burger div {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 100%;
+}
+@media (min-width: 1001px) {
   header {
     height: 80px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1599px) {
+@media (min-width: 641px) and (max-width: 1000px) {
   header {
     height: 80px;
   }
 }
-@media (min-width: 640px) and (max-width: 999px) {
+@media (min-width: 321px) and (max-width: 640px) {
   header {
     height: 34px;
   }
 }
-@media (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 320px) {
   header {
     top: 0;
     height: 34px;

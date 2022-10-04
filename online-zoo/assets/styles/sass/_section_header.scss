@@ -1,6 +1,6 @@
 header {
   position: absolute;
-  background: #000;
+  background: #111115;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +14,12 @@ header {
     a {
       font-weight: 500;
       line-height: 140%;
+      @include md {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
 
       &.active {
         background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -24,29 +30,80 @@ header {
 
       &.logo {
         box-sizing: border-box;
+        width: 82px;
+        height: 52px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 82px;
-        height: 52px;
+        margin: 0 5px 0 0;
         border: 1px solid #FFFFFF;
         border-radius: 2px;
+        background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
+        @include lg {
+          margin: 0 15px 0 0;
+        }
+        @include md {
+          width: 47px;
+          height: 30px;
+          border: none;
+          background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+        }
+        @include sm {
+          width: 47px;
+          height: 30px;
+          border: none;
+          background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+        }
+
 
         .logo-text {
           font-size: 19px;
-          font-weight: 300;
+          font-weight: 400;
           line-height: 120%;
           text-align: center;
-          margin: 3px 0 0 0;
+          margin: 2px 0 0 0;
+          @include md {
+            font-size: 12px;
+          };
+          @include sm {
+            font-size: 12px;
+          };
 
-          span:before {
-            content: url(../../icons/bamboo.svg);
-            // position: absolute;
-            bottom: 3px;
-            left: 5px;
-          }
         }
+        
+      }
+      &:last-child {
+        flex-basis: 42%;
+        text-align: right;
+        @include lg {
+          flex-basis: 33.5%;
+        }
+        @include sm {
+          flex-basis: 33.5%;
+        }
+      }
+    }
 
+    .burger {
+      width: 18px;
+      height: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6px;
+      margin-right: -6px;
+
+      @include xl {
+        display: none;
+      }
+      @include lg {
+        display: none;
+      }
+      div {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 100%;
       }
     }
 

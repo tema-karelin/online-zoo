@@ -7,9 +7,29 @@
   color: #333B41;
 }
 
+@mixin xl {
+  @media (min-width: ($lg + 1px)) {
+    @content
+  }
+};
+@mixin lg {
+  @media (min-width: ($md + 1px)) and  (max-width: $lg) {
+    @content
+  }
+};
+@mixin md {
+  @media (min-width: ($sm + 1px)) and  (max-width: $md) {
+    @content
+  }
+};
+@mixin sm {
+  @media (min-width: 0px) and (max-width: $sm) {
+    @content
+  }
+};
+
 body {
   background-color: #FFF;
-
   @include font_global();
   
   &::-webkit-scrollbar { 
@@ -17,32 +37,20 @@ body {
   }
 
   >* {
+    box-sizing: border-box;
     width: 100vw;
+    min-width: 320px;
+    padding: 0 30px;
     div {
       width: 100%;
       max-width: $guides_width;
+      
+    }
+    @include md {
+      padding: 0 20px;
+    }
+    @include sm {
+      padding: 0 10px;
     }
   }
 }
-
-
-@mixin xl {
-  @media (min-width: $xl) {
-    @content
-  }
-};
-@mixin lg {
-  @media (min-width: $lg) and  (max-width: ($xl - 1px)) {
-    @content
-  }
-};
-@mixin md {
-  @media (min-width: $md) and  (max-width: ($lg - 1px)) {
-    @content
-  }
-};
-@mixin sm {
-  @media (max-width: ($md - 1px)) {
-    @content
-  }
-};
