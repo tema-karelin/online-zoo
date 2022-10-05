@@ -37,11 +37,13 @@ body {
   }
 
   >* {
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     width: 100vw;
     min-width: 320px;
     padding: 0 30px;
-    div {
+    >div {
       width: 100%;
       max-width: $guides_width;
       
