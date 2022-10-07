@@ -325,6 +325,26 @@ body {
   line-height: 120%;
   color: #333B41;
 }
+body h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0 0 11px 0;
+}
+body h3 {
+  font-size: 2.25rem;
+  margin: 0 0 0 0;
+}
+body h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 58px 0 25px 0;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  body h2, body h3 {
+    font-size: 1.5rem;
+  }
+}
 body::-webkit-scrollbar {
   width: 0;
 }
@@ -652,7 +672,8 @@ header nav .burger div {
 
 @media (min-width: 1001px) {
   .backstage-and-pets {
-    height: 1829px;
+    height: 1817px;
+    background: no-repeat right 0px top 0px url(../../images/flower_foto_backstage.png), no-repeat left 0px bottom 0px url(../../images/palm_foto_pets.png), no-repeat right 0px bottom 0px url(../../images/strelitzia_pets.png);
   }
 }
 @media (min-width: 641px) and (max-width: 1000px) {
@@ -669,6 +690,60 @@ header nav .burger div {
   .backstage-and-pets {
     height: 2054px;
   }
+}
+.backstage-and-pets .backstage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+}
+@media (min-width: 1600px) {
+  .backstage-and-pets .backstage {
+    height: 403px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .backstage {
+    height: 427px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .backstage {
+    height: 367px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .backstage {
+    height: 388px;
+  }
+}
+.backstage-and-pets .backstage .bamboo-cap-image {
+  height: 100%;
+}
+@media (min-width: 1600px) {
+  .backstage-and-pets .backstage .bamboo-cap-image {
+    width: 609px;
+    background: no-repeat url(../../images/bamboo_cap_backstage.png);
+  }
+}
+.backstage-and-pets .backstage .backstage-descr {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1600px) {
+  .backstage-and-pets .backstage .backstage-descr {
+    width: 465px;
+  }
+}
+.backstage-and-pets .backstage .backstage-descr p.site {
+  line-height: 130%;
+  margin: 0 0 -12px 0;
+}
+.backstage-and-pets .backstage .backstage-descr p.how-it-works {
+  line-height: 138%;
+  margin: 0 0 -2px 0;
 }
 
 .pick-and-feed {

@@ -1,6 +1,9 @@
 .backstage-and-pets {
   @include xl {
-    height: 1829px;
+    height: 1817px;
+    background: no-repeat right 0px top 0px url(../../images/flower_foto_backstage.png),
+                no-repeat left 0px bottom 0px url(../../images/palm_foto_pets.png),
+                no-repeat right 0px bottom 0px url(../../images/strelitzia_pets.png);
   }
   @include lg {
     height: 1744px;
@@ -11,4 +14,56 @@
   @include sm {
     height: 2054px;
   }
+
+  .backstage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    //for dev
+    margin-top: 128px;
+
+    @include xl-min {
+      height: 403px;
+    }
+    @include lg-min {
+      height: 427px;
+    }
+    @include md-min {
+      height: 367px;
+    }
+    @include sm-min {
+      height: 388px;
+    }
+
+    .bamboo-cap-image {
+      height: 100%;
+      @include xl-min {
+        width: 609px;
+        background: no-repeat url(../../images/bamboo_cap_backstage.png);
+      }
+    }
+
+    .backstage-descr {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include xl-min {
+        width: 465px;
+      }
+
+      p.site {
+        line-height: 130%;
+        margin: 0 0 -12px 0;
+      }
+      p.how-it-works {
+        line-height: 138%;
+        margin: 0 0 -2px 0;
+      }
+    }
+  }
+
+
+
 }
