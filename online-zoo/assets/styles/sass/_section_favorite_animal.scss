@@ -1,16 +1,16 @@
 .favorite-animal {
   
   //section height and position
-  @include xl {
+  @include xl-min {
     height: 780px;
   }
-  @include lg {
+  @include lg-min {
     height: 584px;
   }
-  @include md {
+  @include md-min {
     height: 373px;
   }
-  @include sm {
+  @include sm-min {
     height: 187px;
     margin-top: 34px;
   }
@@ -21,15 +21,57 @@
   &>div {
     display: flex;
     justify-content: end;
+    box-sizing: border-box;
+
+    @include lg-min {
+      padding: 0 57px 0 0;
+    }
 
     &>div {
+      position: relative;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      
+      box-sizing: border-box;
+      padding: 167px 0 100px 0;
+
+      @include lg-min {
+        padding: 123px 0 47px 0;
+      }
+      @include md-min {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 0;
+        .arounded-button {
+          align-self: flex-end;
+          margin: 0 0 40px 0;
+        }
+      }
+      @include sm-min {
+        width: 100%;
+        padding: 0 0 0 0;
+        justify-content: center;
+
+        .arounded-button {
+          position: absolute;
+          bottom: -74px;
+          margin: 0;
+        }
+      }
+
       &>div {
         position: relative;
         display: flex;
+        align-self: flex-end;
+
+        @include md-min {
+          align-self: center;
+        }
       }
     }
   }
@@ -45,6 +87,22 @@
     text-transform: uppercase;
     z-index: 100;
 
+    @include lg-min {
+      width: 400px;
+      height: 320px;
+      font-size: 85px;
+    }
+    @include md-min {
+      width: 248px;
+      height: 205px;
+      font-size: 54px;
+    }
+    @include sm-min {
+      width: 128px;
+      height: 103px;
+      font-size: 28px;
+    }
+
     span {
       color: #FFEE2E;
     }
@@ -58,5 +116,25 @@
       border-radius: 100%;
       background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
       z-index: 50;
-    }
+
+      @include lg-min {
+        width: 367px;
+        height: 367px;
+        top: -54px;
+        left: -57px;
+      }
+      @include md-min {
+        width: 238px;
+        height: 238px;
+        top: -40px;
+        left: -42px;
+      }
+      @include sm-min {
+        width: 119px;
+        height: 119px;
+        top: -20px;
+        left: -19px;
+      }
+  }
+
 }

@@ -355,6 +355,7 @@ header {
   position: absolute;
   background: #111115;
   align-items: center;
+  z-index: 100;
 }
 header nav {
   width: 100%;
@@ -366,12 +367,12 @@ header nav a {
   font-weight: 500;
   line-height: 140%;
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   header nav a {
     display: none;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   header nav a {
     display: none;
   }
@@ -399,7 +400,7 @@ header nav a.logo {
     margin: 0 15px 0 0;
   }
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   header nav a.logo {
     width: 47px;
     height: 30px;
@@ -407,7 +408,7 @@ header nav a.logo {
     background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   header nav a.logo {
     width: 47px;
     height: 30px;
@@ -422,12 +423,12 @@ header nav a.logo .logo-text {
   text-align: center;
   margin: 2px 0 0 0;
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   header nav a.logo .logo-text {
     font-size: 12px;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   header nav a.logo .logo-text {
     font-size: 12px;
   }
@@ -441,7 +442,7 @@ header nav a:last-child {
     flex-basis: 33.5%;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   header nav a:last-child {
     flex-basis: 33.5%;
   }
@@ -455,12 +456,12 @@ header nav .burger {
   padding: 6px;
   margin-right: -6px;
 }
-@media (min-width: 1001px) {
+@media (min-width: 1600px) {
   header nav .burger {
     display: none;
   }
 }
-@media (min-width: 641px) and (max-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1599px) {
   header nav .burger {
     display: none;
   }
@@ -481,12 +482,13 @@ header nav .burger div {
     height: 80px;
   }
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   header {
+    top: 0;
     height: 34px;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   header {
     top: 0;
     height: 34px;
@@ -497,22 +499,22 @@ header nav .burger div {
   background: center bottom no-repeat url("../../images/Giant_Panda_favorite_animal.png"), linear-gradient(90deg, rgb(73, 76, 77) 0%, rgb(237, 237, 237) 40%, rgb(237, 237, 237) 60%, rgb(191, 178, 163) 100%);
   background-size: cover;
 }
-@media (min-width: 1001px) {
+@media (min-width: 1600px) {
   .favorite-animal {
     height: 780px;
   }
 }
-@media (min-width: 641px) and (max-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1599px) {
   .favorite-animal {
     height: 584px;
   }
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   .favorite-animal {
     height: 373px;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .favorite-animal {
     height: 187px;
     margin-top: 34px;
@@ -521,16 +523,62 @@ header nav .burger div {
 .favorite-animal > div {
   display: flex;
   justify-content: end;
+  box-sizing: border-box;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .favorite-animal > div {
+    padding: 0 57px 0 0;
+  }
 }
 .favorite-animal > div > div {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 167px 0 100px 0;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .favorite-animal > div > div {
+    padding: 123px 0 47px 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .favorite-animal > div > div {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 0;
+  }
+  .favorite-animal > div > div .arounded-button {
+    align-self: flex-end;
+    margin: 0 0 40px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .favorite-animal > div > div {
+    width: 100%;
+    padding: 0 0 0 0;
+    justify-content: center;
+  }
+  .favorite-animal > div > div .arounded-button {
+    position: absolute;
+    bottom: -74px;
+    margin: 0;
+  }
 }
 .favorite-animal > div > div > div {
   position: relative;
   display: flex;
+  align-self: flex-end;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .favorite-animal > div > div > div {
+    align-self: center;
+  }
 }
 .favorite-animal .watch-text {
   width: 500px;
@@ -542,6 +590,27 @@ header nav .burger div {
   text-align: center;
   text-transform: uppercase;
   z-index: 100;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .favorite-animal .watch-text {
+    width: 400px;
+    height: 320px;
+    font-size: 85px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .favorite-animal .watch-text {
+    width: 248px;
+    height: 205px;
+    font-size: 54px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .favorite-animal .watch-text {
+    width: 128px;
+    height: 103px;
+    font-size: 28px;
+  }
 }
 .favorite-animal .watch-text span {
   color: #FFEE2E;
@@ -555,6 +624,30 @@ header nav .burger div {
   border-radius: 100%;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   z-index: 50;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .favorite-animal .circle {
+    width: 367px;
+    height: 367px;
+    top: -54px;
+    left: -57px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .favorite-animal .circle {
+    width: 238px;
+    height: 238px;
+    top: -40px;
+    left: -42px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .favorite-animal .circle {
+    width: 119px;
+    height: 119px;
+    top: -20px;
+    left: -19px;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -646,6 +739,22 @@ footer {
   footer {
     height: 334px;
   }
+}
+
+.arounded-button {
+  box-sizing: border-box;
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 3px;
+  padding: 0 0 0 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

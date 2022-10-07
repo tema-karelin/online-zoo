@@ -2,6 +2,7 @@ header {
   position: absolute;
   background: #111115;
   align-items: center;
+  z-index: 100;
 
   nav {
     width: 100%;
@@ -12,10 +13,10 @@ header {
     a {
       font-weight: 500;
       line-height: 140%;
-      @include md {
+      @include md-min {
         display: none;
       }
-      @include sm {
+      @include sm-min {
         display: none;
       }
 
@@ -40,13 +41,13 @@ header {
         @include lg {
           margin: 0 15px 0 0;
         }
-        @include md {
+        @include md-min {
           width: 47px;
           height: 30px;
           border: none;
           background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
         }
-        @include sm {
+        @include sm-min {
           width: 47px;
           height: 30px;
           border: none;
@@ -60,10 +61,10 @@ header {
           line-height: 120%;
           text-align: center;
           margin: 2px 0 0 0;
-          @include md {
+          @include md-min {
             font-size: 12px;
           };
-          @include sm {
+          @include sm-min {
             font-size: 12px;
           };
 
@@ -76,7 +77,7 @@ header {
         @include lg {
           flex-basis: 33.5%;
         }
-        @include sm {
+        @include sm-min {
           flex-basis: 33.5%;
         }
       }
@@ -91,10 +92,10 @@ header {
       padding: 6px;
       margin-right: -6px;
 
-      @include xl {
+      @include xl-min {
         display: none;
       }
-      @include lg {
+      @include lg-min {
         display: none;
       }
       div {
@@ -117,10 +118,11 @@ header {
   @include lg {
     height: 80px;
   }
-  @include md {
+  @include md-min {
+    top: 0;
     height: 34px;
   }
-  @include sm {
+  @include sm-min {
     top: 0;
     height: 34px;
   }

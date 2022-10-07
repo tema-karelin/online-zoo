@@ -1,0 +1,19 @@
+.arounded-button {
+  box-sizing: border-box;
+
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 0 0 3px;
+  padding: 0 0 0 5px;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
