@@ -1,46 +1,85 @@
+@mixin predator_icon {
+  background: no-repeat right 9px bottom 5px url(../../icons/fish.png),
+              no-repeat right 23px bottom 8px url(../../icons/steak.png);
+}
+
+@mixin herbivorous_icon {
+  background: no-repeat right 11px bottom 4px url(../../icons/banana.png),
+              no-repeat right 17px bottom 4px url(../../icons/bamboo_green.png);
+}
+
+@mixin predator_icon_small {
+  background: no-repeat right 5px bottom 6px url(../../icons/fish_small.png),
+              no-repeat right 16px bottom 8px url(../../icons/steak_small.png);
+}
+
+@mixin herbivorous_icon_small {
+  background: no-repeat right 8px bottom 5px url(../../icons/banana_small.png),
+              no-repeat right 12px bottom 5px url(../../icons/bamboo_green_small.png);
+}
+
 .backstage-and-pets {
-  @include xl {
+  @include xl-min {
     height: 1817px;
-    background: no-repeat right 0px top 0px url(../../images/flower_foto_backstage.png),
-                no-repeat left 0px bottom 0px url(../../images/palm_foto_pets.png),
-                no-repeat right 0px bottom 0px url(../../images/strelitzia_pets.png);
+    background: no-repeat right 0px top 0px url(../../images/xl/flower_foto_backstage.png),
+                no-repeat left 0px bottom 0px url(../../images/xl/palm_foto_pets.png),
+                no-repeat right 0px bottom 0px url(../../images/xl/strelitzia_pets.png);
   }
-  @include lg {
+  @include lg-min {
     height: 1744px;
+    background: no-repeat left 0px bottom 0px url(../../images/lg/palm_foto.png),
+                no-repeat right 0px bottom 0px url(../../images/lg/strelitzia.png);
   }
-  @include md {
+  @include md-min {
     height: 1477px;
+    background: no-repeat right 0px top -5px url(../../images/md/flower_foto.png),
+                no-repeat left 0px bottom 0px url(../../images/md/palm_foto.png),
+                no-repeat right 0px bottom 0px url(../../images/md/strelitzia_pets.png);
   }
-  @include sm {
+  @include sm-min {
     height: 2054px;
+    background: no-repeat right 0px top 0px url(../../images/sm/flower_foto.png),
+                no-repeat left 0px bottom 0px url(../../images/sm/palm_foto.png),
+                no-repeat right 0px bottom 0px url(../../images/sm/strelitzia.png);
   }
 
   .backstage {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    //for dev
-    margin-top: 128px;
 
     @include xl-min {
       height: 403px;
+      margin-top: 128px;
     }
     @include lg-min {
       height: 427px;
+      margin-top: 100px;
     }
     @include md-min {
       height: 367px;
+      margin: 60px 0 0 3px;
     }
     @include sm-min {
       height: 388px;
+      margin: 104px 0 0 1px;
     }
 
     .bamboo-cap-image {
+      display: none;
       height: 100%;
+      background: no-repeat center url(../../images/xl/bamboo_cap_backstage.png);
       @include xl-min {
+        display: initial;
         width: 609px;
-        background: no-repeat url(../../images/bamboo_cap_backstage.png);
+        
+      }
+      @include lg-min {
+        display: initial;
+        height: 408px;
+        width: 455px;
       }
     }
 
@@ -52,15 +91,236 @@
       @include xl-min {
         width: 465px;
       }
+      @include lg-min {
+        width: 454px;
+      }
+      @include md-min {
+        width: 82%;
+      }
+      
 
+      h4 {
+        @include sm-min {
+          margin: 35px 0 16px 0;
+        }
+      }
       p.site {
         line-height: 130%;
         margin: 0 0 -12px 0;
+        @include md-min {
+          margin: 11px 0px -24px 0;
+        }
+        @include sm-min {
+          margin: 0 0 -12 0;
+        }
       }
       p.how-it-works {
         line-height: 138%;
         margin: 0 0 -2px 0;
       }
+    }
+  }
+
+  .pets-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @include xl-min {
+
+    }
+
+    .pets-slider {
+      position: relative;
+      width: 100%;
+      @include xl-min {
+        height: 872px;
+        margin: 180px 0 80px 0;
+      }
+      @include lg-min {
+        height: 801px;
+        margin: 142px 0 80px 0;
+      }
+      @include md-min {
+        height: 756px;
+        margin: 80px 0 60px 0;
+      }
+      @include sm-min {
+        height: 1388px;
+        margin: 40px 0 20px 0;
+      }
+
+      .pets-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+        @include sm-min {
+          justify-content: center;
+        }
+
+        
+        
+
+        .pet-card-container {
+          width: 366px;
+          height: 426px;
+          background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+          border-radius: 5px;
+          @include lg-min {
+            width: 294px;
+            height: 354px;
+          }
+          @include md-min {
+            width: 285px;
+            height: 332px;
+          }
+          @include sm-min {
+            width: 285px;
+            height: 332px;
+          }
+
+          //before js
+          &:nth-last-child(-n+2) {
+            @include md-min {
+              display: none;
+            }
+            @include sm-min {
+              display: none;
+            }
+          }
+
+          .pet-card {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: #fff;
+            background-clip: padding-box;
+            color: #000;
+            .img-container {
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+              padding-bottom: 100%;
+              border-radius: 5px 5px 0 0;
+              
+            }
+            .image {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              border-radius: 5px 5px 0 0;
+              top: 0;
+              left: 0;
+              background: no-repeat center url(../../images/animals/penguin.jpg);
+              background-size: cover;
+            }
+
+            .pets-descr {
+              margin: 10px 0 0 0;
+              &.herbivorous {
+                @include herbivorous_icon;
+                @include md-min {
+                  @include herbivorous_icon_small;
+                }
+                @include sm-min {
+                  @include herbivorous_icon_small;
+                }
+              }
+              &.predator {
+                @include predator_icon;
+                @include md-min {
+                  @include predator_icon_small;
+                }
+                @include sm-min {
+                  @include predator_icon_small;
+                }
+              }
+              @include md-min {
+                margin: 7px 0 0 0;
+              }
+              @include sm-min {
+                margin: 7px 0 0 0;
+              }
+            }
+            .kind-of-animal {
+              margin: 0 0 0 13px;
+              text-transform: uppercase;
+              font-weight: 500;
+              @include md-min {
+                font-size: 13px;
+                margin: 0 0 0 11px;
+              }
+              @include sm-min {
+                font-size: 13px;
+                margin: 0 0 0 11px;
+              }
+
+            }
+            .region {
+              margin: 0 0 0 11px;
+              font-size: 15px;
+              font-weight: 300;
+              @include md-min {
+                font-size: 12px;
+                margin: -5px 0 0 11px;
+              }
+              @include sm-min {
+                font-size: 12px;
+                margin: -5px 0 0 11px;
+              }
+            }
+          }
+        }
+        
+      }
+
+
+      .controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        font-size: 19px;
+        font-family: serif;
+
+        @include sm-min {
+          display: none;
+        }
+
+        
+        .arounded-button {
+          position: absolute;
+          width: 62px;
+          height: 62px;
+          border-radius: 100%;
+          top: -33px;
+          margin: 0;
+
+          $control-offset: -81px;
+
+          @include lg-min {
+            $control-offset: 324px;
+          }
+          @include md-min {
+            $control-offset: 223px;
+          }
+          
+
+          &.left {
+            left: $control-offset;
+          }
+          &.right {
+            right: $control-offset;
+          }
+        }
+      }
+      
     }
   }
 

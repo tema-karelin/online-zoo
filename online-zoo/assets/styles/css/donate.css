@@ -348,7 +348,7 @@ body h4 {
 body::-webkit-scrollbar {
   width: 0;
 }
-body > * {
+body > header, body > section, body > footer {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -356,17 +356,17 @@ body > * {
   min-width: 320px;
   padding: 0 30px;
 }
-body > * > div {
+body > header > div, body > section > div, body > footer > div {
   width: 100%;
   max-width: 1160px;
 }
 @media (min-width: 321px) and (max-width: 640px) {
-  body > * {
+  body > header, body > section, body > footer {
     padding: 0 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 320px) {
-  body > * {
+  body > header, body > section, body > footer {
     padding: 0 10px;
   }
 }

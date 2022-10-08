@@ -79,7 +79,7 @@ body {
     width: 0;
   }
 
-  >* {
+  &>header, &>section, &>footer {
     display: flex;
     justify-content: center;
     box-sizing: border-box;

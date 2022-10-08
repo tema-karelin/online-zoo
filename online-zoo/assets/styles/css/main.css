@@ -348,7 +348,7 @@ body h4 {
 body::-webkit-scrollbar {
   width: 0;
 }
-body > * {
+body > header, body > section, body > footer {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -356,17 +356,17 @@ body > * {
   min-width: 320px;
   padding: 0 30px;
 }
-body > * > div {
+body > header > div, body > section > div, body > footer > div {
   width: 100%;
   max-width: 1160px;
 }
 @media (min-width: 321px) and (max-width: 640px) {
-  body > * {
+  body > header, body > section, body > footer {
     padding: 0 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 320px) {
-  body > * {
+  body > header, body > section, body > footer {
     padding: 0 10px;
   }
 }
@@ -670,60 +670,76 @@ header nav .burger div {
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1600px) {
   .backstage-and-pets {
     height: 1817px;
-    background: no-repeat right 0px top 0px url(../../images/flower_foto_backstage.png), no-repeat left 0px bottom 0px url(../../images/palm_foto_pets.png), no-repeat right 0px bottom 0px url(../../images/strelitzia_pets.png);
+    background: no-repeat right 0px top 0px url(../../images/xl/flower_foto_backstage.png), no-repeat left 0px bottom 0px url(../../images/xl/palm_foto_pets.png), no-repeat right 0px bottom 0px url(../../images/xl/strelitzia_pets.png);
   }
 }
-@media (min-width: 641px) and (max-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1599px) {
   .backstage-and-pets {
     height: 1744px;
+    background: no-repeat left 0px bottom 0px url(../../images/lg/palm_foto.png), no-repeat right 0px bottom 0px url(../../images/lg/strelitzia.png);
   }
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   .backstage-and-pets {
     height: 1477px;
+    background: no-repeat right 0px top -5px url(../../images/md/flower_foto.png), no-repeat left 0px bottom 0px url(../../images/md/palm_foto.png), no-repeat right 0px bottom 0px url(../../images/md/strelitzia_pets.png);
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .backstage-and-pets {
     height: 2054px;
+    background: no-repeat right 0px top 0px url(../../images/sm/flower_foto.png), no-repeat left 0px bottom 0px url(../../images/sm/palm_foto.png), no-repeat right 0px bottom 0px url(../../images/sm/strelitzia.png);
   }
 }
 .backstage-and-pets .backstage {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 128px;
+  align-items: center;
 }
 @media (min-width: 1600px) {
   .backstage-and-pets .backstage {
     height: 403px;
+    margin-top: 128px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1599px) {
   .backstage-and-pets .backstage {
     height: 427px;
+    margin-top: 100px;
   }
 }
 @media (min-width: 640px) and (max-width: 999px) {
   .backstage-and-pets .backstage {
     height: 367px;
+    margin: 60px 0 0 3px;
   }
 }
 @media (min-width: 0px) and (max-width: 639px) {
   .backstage-and-pets .backstage {
     height: 388px;
+    margin: 104px 0 0 1px;
   }
 }
 .backstage-and-pets .backstage .bamboo-cap-image {
+  display: none;
   height: 100%;
+  background: no-repeat center url(../../images/xl/bamboo_cap_backstage.png);
 }
 @media (min-width: 1600px) {
   .backstage-and-pets .backstage .bamboo-cap-image {
+    display: initial;
     width: 609px;
-    background: no-repeat url(../../images/bamboo_cap_backstage.png);
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .backstage .bamboo-cap-image {
+    display: initial;
+    height: 408px;
+    width: 455px;
   }
 }
 .backstage-and-pets .backstage .backstage-descr {
@@ -737,13 +753,246 @@ header nav .burger div {
     width: 465px;
   }
 }
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .backstage .backstage-descr {
+    width: 454px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .backstage .backstage-descr {
+    width: 82%;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .backstage .backstage-descr h4 {
+    margin: 35px 0 16px 0;
+  }
+}
 .backstage-and-pets .backstage .backstage-descr p.site {
   line-height: 130%;
   margin: 0 0 -12px 0;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .backstage .backstage-descr p.site {
+    margin: 11px 0px -24px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .backstage .backstage-descr p.site {
+    margin: 0 0 -12 0;
+  }
+}
 .backstage-and-pets .backstage .backstage-descr p.how-it-works {
   line-height: 138%;
   margin: 0 0 -2px 0;
+}
+.backstage-and-pets .pets-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.backstage-and-pets .pets-section .pets-slider {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1600px) {
+  .backstage-and-pets .pets-section .pets-slider {
+    height: 872px;
+    margin: 180px 0 80px 0;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .pets-section .pets-slider {
+    height: 801px;
+    margin: 142px 0 80px 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider {
+    height: 756px;
+    margin: 80px 0 60px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider {
+    height: 1388px;
+    margin: 40px 0 20px 0;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container {
+    justify-content: center;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container {
+  width: 366px;
+  height: 426px;
+  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+  border-radius: 5px;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container {
+    width: 294px;
+    height: 354px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container {
+    width: 285px;
+    height: 332px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container {
+    width: 285px;
+    height: 332px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container:nth-last-child(-n+2) {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container:nth-last-child(-n+2) {
+    display: none;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: #fff;
+  background-clip: padding-box;
+  color: #000;
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .img-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  top: 0;
+  left: 0;
+  background: no-repeat center url(../../images/animals/penguin.jpg);
+  background-size: cover;
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr {
+  margin: 10px 0 0 0;
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.herbivorous {
+  background: no-repeat right 11px bottom 4px url(../../icons/banana.png), no-repeat right 17px bottom 4px url(../../icons/bamboo_green.png);
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.herbivorous {
+    background: no-repeat right 8px bottom 5px url(../../icons/banana_small.png), no-repeat right 12px bottom 5px url(../../icons/bamboo_green_small.png);
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.herbivorous {
+    background: no-repeat right 8px bottom 5px url(../../icons/banana_small.png), no-repeat right 12px bottom 5px url(../../icons/bamboo_green_small.png);
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.predator {
+  background: no-repeat right 9px bottom 5px url(../../icons/fish.png), no-repeat right 23px bottom 8px url(../../icons/steak.png);
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.predator {
+    background: no-repeat right 5px bottom 6px url(../../icons/fish_small.png), no-repeat right 16px bottom 8px url(../../icons/steak_small.png);
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr.predator {
+    background: no-repeat right 5px bottom 6px url(../../icons/fish_small.png), no-repeat right 16px bottom 8px url(../../icons/steak_small.png);
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr {
+    margin: 7px 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr {
+    margin: 7px 0 0 0;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .kind-of-animal {
+  margin: 0 0 0 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .kind-of-animal {
+    font-size: 13px;
+    margin: 0 0 0 11px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .kind-of-animal {
+    font-size: 13px;
+    margin: 0 0 0 11px;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .region {
+  margin: 0 0 0 11px;
+  font-size: 15px;
+  font-weight: 300;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .region {
+    font-size: 12px;
+    margin: -5px 0 0 11px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .region {
+    font-size: 12px;
+    margin: -5px 0 0 11px;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 19px;
+  font-family: serif;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .backstage-and-pets .pets-section .pets-slider .controls {
+    display: none;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  top: -33px;
+  margin: 0;
+}
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left {
+  left: 223px;
+}
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right {
+  right: 223px;
 }
 
 .pick-and-feed {
