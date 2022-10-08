@@ -20,6 +20,16 @@ footer {
     box-sizing: border-box;
     margin: 40px 0 50px 0;
 
+    @include md-min {
+      margin: 12px 0 12px 0;
+    }
+    @include sm-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 20px 0;
+    }
+
     .logo {
       position: absolute;
       top: 0;
@@ -36,10 +46,12 @@ footer {
       background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
   
       @include sm-min {
-        width: 47px;
-        height: 30px;
+        position: relative;
+        width: 130px;
+        height: auto;
         border: none;
-        background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+        background: bottom 5px left 74px no-repeat url(../../icons/bamboo_white.png);
+        order: 0;
       }
   
       .logo-text {
@@ -50,7 +62,7 @@ footer {
         margin: 2px 0 0 0;
         
         @include sm-min {
-          font-size: 12px;
+          margin: 1px -3px 0px 0px;
         };
       }
     }
@@ -62,6 +74,16 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      @include lg-min {
+        right: 33px;
+      }
+      @include md-min {
+        display: none;
+      }
+      @include sm-min {
+        display: none;
+      }
 
       label {
         h4 {
@@ -111,12 +133,36 @@ footer {
     .donate-for-volunteers {
       margin: 121px 0 0 0;
       padding: 0;
+
+      @include md-min {
+        margin: 85px 0 0 0;
+      }
+      @include sm-min {
+        margin: 30px 4px 0 0;
+        order: 2;
+      }
     }
 
     .contacts {
       position: absolute;
+      width: fit-content;
       bottom: 0;
       left: 0;
+
+      @include md-min {
+        left: auto;
+        right: 0;
+        top: 0;
+      }
+      @include sm-min {
+        position: relative;
+        width: 85%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 29px 0 0 0;
+        order: 1;
+      }
+
       a {
         box-sizing: border-box;
         display: flex;
@@ -125,9 +171,21 @@ footer {
         padding: 0 0 0 0;
         color: #FFFFFF;
 
-        
+        @include md-min {
+          margin: 0 0 0 0;
+        }
+        @include sm-min {
+          margin: 0 0 0 0;
+        }
         span {
           margin: 3px 0 0 0;
+
+          @include md-min {
+            display: none;
+          }
+          @include sm-min {
+            display: none;
+          }
         }
         .social-icon {
           display: flex;
@@ -138,6 +196,13 @@ footer {
           border-radius: 100%;
           background: rgba(196, 196, 196, 0.5);
           margin: 0 12px 0 0;
+
+          @include md-min {
+            margin: 0 0 20px 0;
+          }
+          @include sm-min {
+            margin: 0 0 0 0;
+          }
         }
       }
       
@@ -150,11 +215,36 @@ footer {
 
       display: flex;
       justify-content: center;
+
+      @include md-min {
+        justify-content: flex-start;
+      }
+      @include sm-min {
+        position: relative;
+        width: 100%;
+
+        margin: 27px 0 0 0;
+        order: 4;
+      }
       
       nav {
         display: flex;
         justify-content: space-between;
         width: 362px;
+
+        @include lg-min {
+          width: 332px;
+          margin: 0 26px 1px 0;
+        }
+        @include md-min {
+          width: 299px;
+          margin: 0 26px 2px 0;
+        }
+        @include sm-min {
+          width: 100%;
+          padding: 0 11px;
+        }
+        
 
         a.active {
           background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -172,6 +262,17 @@ footer {
       font-weight: 300;
       letter-spacing: -0.2px;
       line-height: 180%;
+
+      @include sm-min {
+        position: relative;
+        width: 217px;
+        align-self: flex-end;
+        margin: 22px 0 0 0;
+        font-size: 16px;
+        letter-spacing: -0.6px;
+        line-height: 190%;
+        order: 3;
+      }
     }
   }
 

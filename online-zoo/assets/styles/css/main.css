@@ -1069,6 +1069,19 @@ footer .container {
   box-sizing: border-box;
   margin: 40px 0 50px 0;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container {
+    margin: 12px 0 12px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 20px 0;
+  }
+}
 footer .container .logo {
   position: absolute;
   top: 0;
@@ -1086,10 +1099,12 @@ footer .container .logo {
 }
 @media (min-width: 0px) and (max-width: 639px) {
   footer .container .logo {
-    width: 47px;
-    height: 30px;
+    position: relative;
+    width: 130px;
+    height: auto;
     border: none;
-    background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+    background: bottom 5px left 74px no-repeat url(../../icons/bamboo_white.png);
+    order: 0;
   }
 }
 footer .container .logo .logo-text {
@@ -1101,7 +1116,7 @@ footer .container .logo .logo-text {
 }
 @media (min-width: 0px) and (max-width: 639px) {
   footer .container .logo .logo-text {
-    font-size: 12px;
+    margin: 1px -3px 0px 0px;
   }
 }
 footer .container form {
@@ -1111,6 +1126,21 @@ footer .container form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  footer .container form {
+    right: 33px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container form {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container form {
+    display: none;
+  }
 }
 footer .container form label h4 {
   width: 367px;
@@ -1151,10 +1181,39 @@ footer .container .donate-for-volunteers {
   margin: 121px 0 0 0;
   padding: 0;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .donate-for-volunteers {
+    margin: 85px 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .donate-for-volunteers {
+    margin: 30px 4px 0 0;
+    order: 2;
+  }
+}
 footer .container .contacts {
   position: absolute;
+  width: fit-content;
   bottom: 0;
   left: 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts {
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts {
+    position: relative;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 29px 0 0 0;
+    order: 1;
+  }
 }
 footer .container .contacts a {
   box-sizing: border-box;
@@ -1164,8 +1223,28 @@ footer .container .contacts a {
   padding: 0 0 0 0;
   color: #FFFFFF;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a {
+    margin: 0 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a {
+    margin: 0 0 0 0;
+  }
+}
 footer .container .contacts a span {
   margin: 3px 0 0 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a span {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a span {
+    display: none;
+  }
 }
 footer .container .contacts a .social-icon {
   display: flex;
@@ -1177,6 +1256,16 @@ footer .container .contacts a .social-icon {
   background: rgba(196, 196, 196, 0.5);
   margin: 0 12px 0 0;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a .social-icon {
+    margin: 0 0 20px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a .social-icon {
+    margin: 0 0 0 0;
+  }
+}
 footer .container .navigation-container {
   position: absolute;
   width: 100%;
@@ -1185,10 +1274,41 @@ footer .container .navigation-container {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .navigation-container {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .navigation-container {
+    position: relative;
+    width: 100%;
+    margin: 27px 0 0 0;
+    order: 4;
+  }
+}
 footer .container .navigation-container nav {
   display: flex;
   justify-content: space-between;
   width: 362px;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  footer .container .navigation-container nav {
+    width: 332px;
+    margin: 0 26px 1px 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .navigation-container nav {
+    width: 299px;
+    margin: 0 26px 2px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .navigation-container nav {
+    width: 100%;
+    padding: 0 11px;
+  }
 }
 footer .container .navigation-container nav a.active {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -1204,6 +1324,18 @@ footer .container .designed-by {
   font-weight: 300;
   letter-spacing: -0.2px;
   line-height: 180%;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .designed-by {
+    position: relative;
+    width: 217px;
+    align-self: flex-end;
+    margin: 22px 0 0 0;
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    line-height: 190%;
+    order: 3;
+  }
 }
 
 .arounded-button, .squared-button {
