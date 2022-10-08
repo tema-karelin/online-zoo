@@ -17,3 +17,9 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.squared-button {
+  @extend .arounded-button;
+  border-radius: 5px;
+  margin: 0 0 0 0;
+}

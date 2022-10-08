@@ -490,7 +490,7 @@ header nav .burger div {
   width: 100%;
   height: 2px;
   background: #fff;
-  border-radius: 100%;
+  border-radius: 2px;
 }
 @media (min-width: 1001px) {
   header {
@@ -573,7 +573,7 @@ header nav .burger div {
     align-items: center;
     padding: 0 0 0 0;
   }
-  .favorite-animal > div > div .arounded-button {
+  .favorite-animal > div > div .arounded-button, .favorite-animal > div > div .squared-button {
     align-self: flex-end;
     margin: 0 0 40px 0;
   }
@@ -584,7 +584,7 @@ header nav .burger div {
     padding: 0 0 0 0;
     justify-content: center;
   }
-  .favorite-animal > div > div .arounded-button {
+  .favorite-animal > div > div .arounded-button, .favorite-animal > div > div .squared-button {
     position: absolute;
     bottom: -74px;
     margin: 0;
@@ -980,7 +980,7 @@ header nav .burger div {
     display: none;
   }
 }
-.backstage-and-pets .pets-section .pets-slider .controls .arounded-button {
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button, .backstage-and-pets .pets-section .pets-slider .controls .squared-button {
   position: absolute;
   width: 62px;
   height: 62px;
@@ -988,10 +988,10 @@ header nav .burger div {
   top: -33px;
   margin: 0;
 }
-.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left {
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left, .backstage-and-pets .pets-section .pets-slider .controls .left.squared-button {
   left: 223px;
 }
-.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right {
+.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right, .backstage-and-pets .pets-section .pets-slider .controls .right.squared-button {
   right: 223px;
 }
 
@@ -1044,28 +1044,169 @@ header nav .burger div {
 footer {
   background: #111115;
 }
-@media (min-width: 1001px) {
+@media (min-width: 1600px) {
   footer {
     height: 443px;
   }
 }
-@media (min-width: 641px) and (max-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1599px) {
   footer {
     height: 443px;
   }
 }
-@media (min-width: 321px) and (max-width: 640px) {
+@media (min-width: 640px) and (max-width: 999px) {
   footer {
     height: 282px;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 639px) {
   footer {
     height: 334px;
   }
 }
+footer .container {
+  position: relative;
+  box-sizing: border-box;
+  margin: 40px 0 50px 0;
+}
+footer .container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 0 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .logo {
+    width: 47px;
+    height: 30px;
+    border: none;
+    background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+  }
+}
+footer .container .logo .logo-text {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  margin: 2px 0 0 0;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .logo .logo-text {
+    font-size: 12px;
+  }
+}
+footer .container form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .container form label h4 {
+  width: 367px;
+  color: #FFFFFF;
+  margin: 5px 0 19px 0;
+}
+footer .container form .email-area {
+  display: flex;
+  justify-content: flex-end;
+}
+footer .container form .email-area .email-in-container {
+  width: 228px;
+  height: 42px;
+  margin: 0 10px 0 0;
+  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+  border-radius: 4px;
+}
+footer .container form .email-area .email-in-container .email-in {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #111115;
+  background-clip: padding-box;
+  color: #BDBDBD;
+}
+footer .container form .email-area .email-submit {
+  width: 129px;
+  height: 42px;
+  background: #F1F3F2;
+  border: 1px solid #4B9200;
+  border-radius: 5px;
+  color: #4B9200;
+}
+footer .container .donate-for-volunteers {
+  margin: 121px 0 0 0;
+  padding: 0;
+}
+footer .container .contacts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer .container .contacts a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 0;
+  color: #FFFFFF;
+}
+footer .container .contacts a span {
+  margin: 3px 0 0 0;
+}
+footer .container .contacts a .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: rgba(196, 196, 196, 0.5);
+  margin: 0 12px 0 0;
+}
+footer .container .navigation-container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+footer .container .navigation-container nav {
+  display: flex;
+  justify-content: space-between;
+  width: 362px;
+}
+footer .container .navigation-container nav a.active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #F9804B;
+}
+footer .container .designed-by {
+  position: absolute;
+  right: -3px;
+  bottom: -4px;
+  width: 230px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  line-height: 180%;
+}
 
-.arounded-button {
+.arounded-button, .squared-button {
   box-sizing: border-box;
   width: 298px;
   height: 54px;
@@ -1079,6 +1220,11 @@ footer {
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.squared-button {
+  border-radius: 5px;
+  margin: 0 0 0 0;
 }
 
 /*# sourceMappingURL=main.css.map */

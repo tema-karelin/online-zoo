@@ -1,15 +1,179 @@
 footer {
   background: #111115;
-  @include xl {
+  
+
+  @include xl-min {
     height: 443px;
   }
-  @include lg {
+  @include lg-min {
     height: 443px;
   }
-  @include md {
+  @include md-min {
     height: 282px;
   }
-  @include sm {
+  @include sm-min {
     height: 334px;
   }
+
+  .container {
+    position: relative;
+    box-sizing: border-box;
+    margin: 40px 0 50px 0;
+
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 82px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px 0 0;
+      border: 1px solid #FFFFFF;
+      border-radius: 2px;
+      background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
+  
+      @include sm-min {
+        width: 47px;
+        height: 30px;
+        border: none;
+        background: bottom 2px left 4px no-repeat url(../../icons/bamboo_small_white.png);
+      }
+  
+      .logo-text {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        margin: 2px 0 0 0;
+        
+        @include sm-min {
+          font-size: 12px;
+        };
+      }
+    }
+
+    form {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      label {
+        h4 {
+          width: 367px;
+          color: #FFFFFF;
+          margin: 5px 0 19px 0;
+        }
+      }
+
+      .email-area {
+        display: flex;
+        justify-content: flex-end;
+
+        .email-in-container {
+          width: 228px;
+          height: 42px;
+          margin: 0 10px 0 0;
+          background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+          border-radius: 4px;
+
+          .email-in {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: 0 0 0 10px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background: #111115;
+            background-clip: padding-box;
+            color: #BDBDBD;
+          }
+        }
+        
+        .email-submit {
+          width: 129px;
+          height: 42px;
+          background: #F1F3F2;
+          border: 1px solid #4B9200;
+          border-radius: 5px;
+          color: #4B9200;
+        }
+      } 
+
+      
+    }
+
+    .donate-for-volunteers {
+      margin: 121px 0 0 0;
+      padding: 0;
+    }
+
+    .contacts {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      a {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0 0;
+        padding: 0 0 0 0;
+        color: #FFFFFF;
+
+        
+        span {
+          margin: 3px 0 0 0;
+        }
+        .social-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 26px;
+          height: 26px;
+          border-radius: 100%;
+          background: rgba(196, 196, 196, 0.5);
+          margin: 0 12px 0 0;
+        }
+      }
+      
+    }
+    .navigation-container {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+
+      display: flex;
+      justify-content: center;
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        width: 362px;
+
+        a.active {
+          background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #F9804B;
+        }
+      }
+    }
+    .designed-by {
+      position: absolute;
+      right: -3px;
+      bottom: -4px;
+      width: 230px;
+      font-weight: 300;
+      letter-spacing: -0.2px;
+      line-height: 180%;
+    }
+  }
+
+  
 }
