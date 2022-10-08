@@ -373,6 +373,7 @@ body > header > div, body > section > div, body > footer > div {
 
 header {
   position: absolute;
+  top: 0;
   background: #111115;
   align-items: center;
   z-index: 100;
@@ -512,6 +513,356 @@ header nav .burger div {
   header {
     top: 0;
     height: 34px;
+  }
+}
+
+.favorite-animal-donate {
+  background: center bottom no-repeat url(../../images/panda_bg_favorite_animal_donate.png);
+  background-size: cover;
+}
+@media (min-width: 1600px) {
+  .favorite-animal-donate {
+    height: 390px;
+    margin-top: 80px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .favorite-animal-donate {
+    height: 390px;
+    margin-top: 80px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .favorite-animal-donate {
+    height: 335px;
+    margin-top: 34px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .favorite-animal-donate {
+    height: 187px;
+    margin-top: 34px;
+  }
+}
+
+.pick-and-feed-donate {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+@media (min-width: 1600px) {
+  .pick-and-feed-donate {
+    height: 1482px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .pick-and-feed-donate {
+    height: 1333px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .pick-and-feed-donate {
+    height: 1333px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  .pick-and-feed-donate {
+    height: 1145px;
+  }
+}
+
+footer {
+  background: #111115;
+}
+@media (min-width: 1600px) {
+  footer {
+    height: 443px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  footer {
+    height: 443px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer {
+    height: 282px;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer {
+    height: 334px;
+  }
+}
+footer .container {
+  position: relative;
+  box-sizing: border-box;
+  margin: 40px 0 50px 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container {
+    margin: 12px 0 12px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 20px 0;
+  }
+}
+footer .container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 0 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .logo {
+    position: relative;
+    width: 130px;
+    height: auto;
+    border: none;
+    background: bottom 5px left 74px no-repeat url(../../icons/bamboo_white.png);
+    order: 0;
+  }
+}
+footer .container .logo .logo-text {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  margin: 2px 0 0 0;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .logo .logo-text {
+    margin: 1px -3px 0px 0px;
+  }
+}
+footer .container form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  footer .container form {
+    right: 33px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container form {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container form {
+    display: none;
+  }
+}
+footer .container form label h4 {
+  width: 367px;
+  color: #FFFFFF;
+  margin: 5px 0 19px 0;
+}
+footer .container form .email-area {
+  display: flex;
+  justify-content: flex-end;
+}
+footer .container form .email-area .email-in-container {
+  width: 228px;
+  height: 42px;
+  margin: 0 10px 0 0;
+  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+  border-radius: 4px;
+}
+footer .container form .email-area .email-in-container .email-in {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #111115;
+  background-clip: padding-box;
+  color: #BDBDBD;
+}
+footer .container form .email-area .email-submit {
+  width: 129px;
+  height: 42px;
+  background: #F1F3F2;
+  border: 1px solid #4B9200;
+  border-radius: 5px;
+  color: #4B9200;
+}
+footer .container .donate-for-volunteers {
+  margin: 121px 0 0 0;
+  padding: 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .donate-for-volunteers {
+    margin: 85px 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .donate-for-volunteers {
+    margin: 30px 4px 0 0;
+    order: 2;
+  }
+}
+footer .container .contacts {
+  position: absolute;
+  width: fit-content;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts {
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts {
+    position: relative;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 29px 0 0 0;
+    order: 1;
+  }
+}
+footer .container .contacts a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 0;
+  color: #FFFFFF;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a {
+    margin: 0 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a {
+    margin: 0 0 0 0;
+  }
+}
+footer .container .contacts a span {
+  margin: 3px 0 0 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a span {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a span {
+    display: none;
+  }
+}
+footer .container .contacts a .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: rgba(196, 196, 196, 0.5);
+  margin: 0 12px 0 0;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .contacts a .social-icon {
+    margin: 0 0 20px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .contacts a .social-icon {
+    margin: 0 0 0 0;
+  }
+}
+footer .container .navigation-container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .navigation-container {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .navigation-container {
+    position: relative;
+    width: 100%;
+    margin: 27px 0 0 0;
+    order: 4;
+  }
+}
+footer .container .navigation-container nav {
+  display: flex;
+  justify-content: space-between;
+  width: 362px;
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  footer .container .navigation-container nav {
+    width: 332px;
+    margin: 0 26px 1px 0;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  footer .container .navigation-container nav {
+    width: 299px;
+    margin: 0 26px 2px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .navigation-container nav {
+    width: 100%;
+    padding: 0 11px;
+  }
+}
+footer .container .navigation-container nav a.active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #F9804B;
+}
+footer .container .designed-by {
+  position: absolute;
+  right: -3px;
+  bottom: -4px;
+  width: 230px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  line-height: 180%;
+}
+@media (min-width: 0px) and (max-width: 639px) {
+  footer .container .designed-by {
+    position: relative;
+    width: 217px;
+    align-self: flex-end;
+    margin: 22px 0 0 0;
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    line-height: 190%;
+    order: 3;
   }
 }
 

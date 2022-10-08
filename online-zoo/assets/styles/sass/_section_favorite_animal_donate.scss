@@ -1,0 +1,23 @@
+.favorite-animal-donate {
+
+  //section height and position
+  @include xl-min {
+    height: 390px;
+    margin-top: 80px;
+  }
+  @include lg-min {
+    height: 390px;
+    margin-top: 80px;
+  }
+  @include md-min {
+    height: 335px;
+    margin-top: 34px;
+  }
+  @include sm-min {
+    height: 187px;
+    margin-top: 34px;
+  }
+  
+  background: center bottom no-repeat url(../../images/panda_bg_favorite_animal_donate.png);
+  background-size: cover;
+}
