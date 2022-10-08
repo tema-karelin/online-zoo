@@ -989,11 +989,35 @@ header nav .burger div {
   top: -33px;
   margin: 0;
 }
-.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left, .backstage-and-pets .pets-section .pets-slider .controls .left.squared-button {
-  left: 223px;
+@media (min-width: 1600px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left, .backstage-and-pets .pets-section .pets-slider .controls .left.squared-button {
+    left: -81px;
+  }
 }
-.backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right, .backstage-and-pets .pets-section .pets-slider .controls .right.squared-button {
-  right: 223px;
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left, .backstage-and-pets .pets-section .pets-slider .controls .left.squared-button {
+    left: 324px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.left, .backstage-and-pets .pets-section .pets-slider .controls .left.squared-button {
+    left: 223px;
+  }
+}
+@media (min-width: 1600px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right, .backstage-and-pets .pets-section .pets-slider .controls .right.squared-button {
+    right: -81px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right, .backstage-and-pets .pets-section .pets-slider .controls .right.squared-button {
+    right: 324px;
+  }
+}
+@media (min-width: 640px) and (max-width: 999px) {
+  .backstage-and-pets .pets-section .pets-slider .controls .arounded-button.right, .backstage-and-pets .pets-section .pets-slider .controls .right.squared-button {
+    right: 223px;
+  }
 }
 
 .pick-and-feed {

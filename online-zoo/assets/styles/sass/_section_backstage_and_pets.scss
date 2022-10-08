@@ -302,21 +302,33 @@
           top: -33px;
           margin: 0;
 
-          $control-offset: -81px;
-
-          @include lg-min {
-            $control-offset: 324px;
-          }
-          @include md-min {
-            $control-offset: 223px;
-          }
+          $control-offset-xl: -81px;
+          $control-offset-lg: 324px;
+          $control-offset-md: 223px;
+          
           
 
           &.left {
-            left: $control-offset;
+            @include xl-min {
+              left: $control-offset-xl;
+            }
+            @include lg-min {
+              left: $control-offset-lg;
+            }
+            @include md-min {
+              left: $control-offset-md;
+            }
           }
           &.right {
-            right: $control-offset;
+            @include xl-min {
+              right: $control-offset-xl;
+            }
+            @include lg-min {
+              right: $control-offset-lg;
+            }
+            @include md-min {
+              right: $control-offset-md;
+            }
           }
         }
       }
