@@ -68,10 +68,16 @@ header {
           @include sm-min {
             font-size: 12px;
           };
-
         }
-        
+        &:hover, &:active {
+          color: #fff;
+          text-shadow: none;
+        }
       }
+      
+      @include link_hover;
+      @include link_active;
+
       &:last-child {
         flex-basis: 42%;
         text-align: right;

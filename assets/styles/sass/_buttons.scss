@@ -16,6 +16,16 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
+
+  &:hover {
+    background: #E47209;
+  }
+  &:disabled {
+    background: #767474;
+  }
+  &:active {
+    background: #4B9200;
+  }
 }
 
 .squared-button {

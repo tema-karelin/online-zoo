@@ -5,7 +5,23 @@
   font-weight: 400;
   line-height: 120%;
   color: #333B41;
-}
+};
+
+@mixin link_hover {
+  &:hover {
+    color: #c36800;
+    text-shadow: 4px 3px 7px rgb(249 185 75 / 71%);
+    @content
+  }
+};
+@mixin link_active {
+  &:active {
+    color: #4B9200;
+    text-shadow: none;
+    @content
+  }
+};
+
 
 @mixin xl {
   @media (min-width: ($lg + 1px)) {
