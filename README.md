@@ -1,2 +1,3 @@
-# tema-karelin-JSFE2022Q3
-Private repository for @tema-karelin
+# Online-zoo task for Rolling Scopes School
+
+https://github.com/rolling-scopes-school/js-fe-course-en/blob/main/tasks/online-zoo/online-zoo.md
