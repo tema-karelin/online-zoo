@@ -29,8 +29,19 @@
     }
 
     .feedback {
-      margin: 61px 0 60px 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: 61px 0 21px 0;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .feedback-card-container {
+        min-width: 268px;
         width: 268px;
         height: 391px;
         background: linear-gradient(
@@ -50,6 +61,7 @@
             #eaf7fe 149.54%
           );
         border-radius: 20px;
+        margin: 0 29px 0 0;
 
         .feedback-card {
           box-sizing: border-box;
@@ -70,6 +82,7 @@
             height: 37px;
             display: flex;
             justify-content: flex-start;
+            align-items: center;
             margin: 0 0 11px 0;
 
             .avatar {
@@ -79,6 +92,14 @@
               background: url(../../images/avatar/user_icon.png);
               margin-right: 10px;
             }
+            p.name {
+              font-weight: 400;
+              color: #000;
+            }
+            p.info {
+              color: #BDBDBD;
+            }
+
           }
 
           p {
@@ -87,6 +108,49 @@
             line-height: 120%;
             color: #767474;
           }
+        }
+      }
+    }
+
+    .scrollbar-container {
+      width: 600px;
+      height: 8px;
+      align-self: center;
+      margin: 0 0 31px 0;
+      background: linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+          ),
+          linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+          );
+      border-radius: 5px;
+
+      .scrollbar {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        background-clip: padding-box;
+        background-color: #f1f3f2;
+
+        .scrollbar-thumb {
+          box-sizing: border-box;
+          width: 115px;
+          height: 6px;
+          border: solid transparent 1px;
+          background: #FE9013;
+          border-radius: 5px;
         }
       }
     }
