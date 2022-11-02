@@ -709,13 +709,32 @@ footer .container form .email-area .email-in-container .email-in {
   background-clip: padding-box;
   color: #BDBDBD;
 }
+footer .container form .email-area .email-in-container .email-in:focus-visible {
+  outline: none;
+  border: 1px solid #4B9200;
+}
+footer .container form .email-area .email-in-container .email-in:invalid {
+  border: 1px solid #D31414;
+}
 footer .container form .email-area .email-submit {
   width: 129px;
   height: 42px;
   background: #F1F3F2;
-  border: 1px solid #4B9200;
+  border: 1px solid #000;
   border-radius: 5px;
+  color: #000;
+}
+footer .container form .email-area .email-submit:active {
+  border: 1px solid #4B9200;
   color: #4B9200;
+}
+footer .container form .email-area .email-submit:disabled {
+  border: 1px solid #D31414;
+  color: #D31414;
+}
+footer .container form .email-area .email-submit:invalid {
+  border: 1px solid #D31414;
+  color: #D31414;
 }
 footer .container .donate-for-volunteers {
   margin: 121px 0 0 0;

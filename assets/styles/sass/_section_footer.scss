@@ -114,6 +114,15 @@ footer {
             background: #111115;
             background-clip: padding-box;
             color: #BDBDBD;
+
+            &:focus-visible {
+              outline: none;
+              border: 1px solid #4B9200;
+            }
+            &:invalid {
+              border: 1px solid #D31414;
+
+            }
           }
         }
         
@@ -121,9 +130,22 @@ footer {
           width: 129px;
           height: 42px;
           background: #F1F3F2;
-          border: 1px solid #4B9200;
+          border: 1px solid #000;
           border-radius: 5px;
-          color: #4B9200;
+          color: #000;
+
+          &:active {
+            border: 1px solid #4B9200;
+            color: #4B9200;
+          }
+          &:disabled {
+            border: 1px solid #D31414;
+            color: #D31414;
+          }
+          &:invalid {
+            border: 1px solid #D31414;
+            color: #D31414;
+          }
         }
       } 
 
