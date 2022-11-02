@@ -148,6 +148,7 @@ footer {
       width: fit-content;
       bottom: 0;
       left: 0;
+      z-index: 100;
 
       @include md-min {
         left: auto;
@@ -170,6 +171,18 @@ footer {
         margin: 10px 0 0 0;
         padding: 0 0 0 0;
         color: #FFFFFF;
+
+
+        @include link_hover {
+          & .social-icon {
+            background: #c36800;
+          }
+        }
+        @include link_active {
+          & .social-icon {
+            background: #4B9200;
+          }
+        }
 
         @include md-min {
           margin: 0 0 0 0;
@@ -215,6 +228,7 @@ footer {
 
       display: flex;
       justify-content: center;
+      z-index: 50;
 
       @include md-min {
         justify-content: flex-start;
@@ -245,6 +259,10 @@ footer {
           padding: 0 11px;
         }
         
+        a {
+          @include link_hover;
+          @include link_active;
+        }
 
         a.active {
           background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -262,6 +280,10 @@ footer {
       font-weight: 300;
       letter-spacing: -0.2px;
       line-height: 180%;
+      z-index: 100;
+
+      @include link_hover;
+      @include link_active;
 
       @include sm-min {
         position: relative;
