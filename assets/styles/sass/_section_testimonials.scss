@@ -1,4 +1,5 @@
 .testimonials {
+  background: no-repeat bottom -26% right url(../../images/xl/leav_foto_testimonials.png);
   @include xl {
     height: 919px;
   }
@@ -10,5 +11,84 @@
   }
   @include sm {
     height: 580px;
+  }
+
+  padding: 140px 0 180px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+
+    h3 {
+      font-weight: 400;
+      align-self: center;
+      margin: 14px 0 0 0;
+    }
+
+    .feedback {
+      margin: 61px 0 60px 0;
+      .feedback-card-container {
+        width: 268px;
+        height: 391px;
+        background: linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+          ),
+          linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+          );
+        border-radius: 20px;
+
+        .feedback-card {
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          border: 2px solid transparent;
+          border-radius: 20px;
+          background-color: #f1f3f2;
+          background-clip: padding-box;
+          padding: 15px 15px 20px 15px;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+
+          .feedback-card-header {
+            width: 100%;
+            height: 37px;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0 0 11px 0;
+
+            .avatar {
+              width: 37px;
+              height: 37px;
+              border-radius: 100%;
+              background: url(../../images/avatar/user_icon.png);
+              margin-right: 10px;
+            }
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 120%;
+            color: #767474;
+          }
+        }
+      }
+    }
   }
 }
