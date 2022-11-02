@@ -1033,6 +1033,7 @@ header nav .burger div {
 }
 
 .pick-and-feed {
+  padding: 69px 0 100px 0;
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   opacity: 0.9;
 }
@@ -1055,6 +1056,99 @@ header nav .burger div {
   .pick-and-feed {
     height: 1082px;
   }
+}
+.pick-and-feed .container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 41px 57px 59px 57px;
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+.pick-and-feed .container p {
+  line-height: 130%;
+}
+.pick-and-feed .container h4 {
+  margin: 35px 0 0 0;
+}
+.pick-and-feed .container h4, .pick-and-feed .container > p {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 0 42px;
+}
+.pick-and-feed .container p.during {
+  font-weight: 500;
+  margin: 46px 0 0 0;
+}
+.pick-and-feed .container p.even {
+  margin: 11px 0 0 0;
+  padding: 0 136px 0 42px;
+}
+.pick-and-feed .container p.even a {
+  color: #333B41;
+  text-decoration: underline;
+  text-decoration-color: #FE9013;
+  text-underline-position: under;
+}
+.pick-and-feed .container h2 {
+  color: #FE9013;
+  margin: 0px 0 0 0;
+}
+.pick-and-feed .container h3 {
+  font-weight: 400;
+  margin: 73px 0 0 0;
+}
+.pick-and-feed .container .feed-steps {
+  display: flex;
+  max-width: 764px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 54px 0 60px 0;
+}
+.pick-and-feed .container .feed-steps .step {
+  display: flex;
+  width: 168px;
+  height: 244px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.pick-and-feed .container .feed-steps .step .step-image-container {
+  width: 168px;
+  height: 168px;
+  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+  border-radius: 5px;
+  margin: 0 0 32px 0;
+}
+.pick-and-feed .container .feed-steps .step .step-image-container .step-image {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 0 0 0 0;
+}
+.pick-and-feed .container .feed-steps .step .step-image-container .step-image.pay-img {
+  background: no-repeat center url(../../images/feed/pay.png);
+  background-color: #fff;
+  background-clip: padding-box;
+}
+.pick-and-feed .container .feed-steps .step .step-image-container .step-image.zoo-img {
+  background: no-repeat center url(../../images/feed/zoo.png);
+  background-color: #fff;
+  background-clip: padding-box;
+}
+.pick-and-feed .container .feed-steps .step .step-image-container .step-image.monkey-img {
+  background: no-repeat center url(../../images/feed/monkey.png);
+  background-color: #fff;
+  background-clip: padding-box;
+}
+.pick-and-feed .container .feed-steps .arrow {
+  width: 70px;
+  height: 100%;
+  background: no-repeat 0 30% url(../../images/feed/arrow.png);
 }
 
 @media (min-width: 1001px) {
