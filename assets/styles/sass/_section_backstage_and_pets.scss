@@ -167,6 +167,7 @@
         
 
         .pet-card-container {
+          position: relative;
           width: 366px;
           height: 426px;
           background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
@@ -194,6 +195,17 @@
             }
           }
 
+          .pet-card-overlayer {
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: transparent;
+            background-clip: padding-box;
+            z-index: 100;
+          }
           .pet-card {
             box-sizing: border-box;
             width: 100%;
@@ -203,6 +215,7 @@
             background: #fff;
             background-clip: padding-box;
             color: #000;
+            z-index: 50;
             .img-container {
               overflow: hidden;
               position: relative;
@@ -224,6 +237,8 @@
 
             .pets-descr {
               margin: 10px 0 0 0;
+              position: relative;
+              z-index: 150;
               &.herbivorous {
                 @include herbivorous_icon;
                 @include md-min {
@@ -277,6 +292,25 @@
               }
             }
           }
+          &:hover {
+            color: #fff;
+            transition: 0.7s;
+            .image {
+              scale: 1.1;
+              transition: 0.7s;
+            }
+            .pets-descr.predator, .pets-descr.herbivorous {
+              color: #F1F3F2;
+              margin: -40px 0 0 0;
+              transition: 0.7s;
+              background: transparent;
+            }
+            .pet-card-overlayer {
+              background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 24%, rgba(0,0,0,0.3) 43%, rgba(0,0,0,0.3) 100%);
+              transition: 0.7s;
+            }
+          }
+
         }
         
       }
