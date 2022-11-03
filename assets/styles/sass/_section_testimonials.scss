@@ -71,11 +71,7 @@
           border-radius: 20px;
           background-color: #f1f3f2;
           background-clip: padding-box;
-          padding: 15px 15px 20px 15px;
-          overflow-y: scroll;
-          &::-webkit-scrollbar {
-            width: 0;
-          }
+          padding: 15px;
 
           .feedback-card-header {
             width: 100%;
@@ -97,9 +93,8 @@
               color: #000;
             }
             p.info {
-              color: #BDBDBD;
+              color: #bdbdbd;
             }
-
           }
 
           p {
@@ -107,6 +102,13 @@
             font-size: 15px;
             line-height: 120%;
             color: #767474;
+            &.feedback-text {
+              height: 308px;
+              overflow-y: scroll;
+              &::-webkit-scrollbar {
+                width: 0;
+              }
+            }
           }
         }
       }
@@ -118,21 +120,21 @@
       align-self: center;
       margin: 0 0 31px 0;
       background: linear-gradient(
-            315.75deg,
-            rgba(254, 189, 171, 0.74) 30.06%,
-            rgba(243, 169, 248, 0.66) 50.74%,
-            #e0d8f0 80.49%,
-            #eaf7fe 127.9%,
-            #eaf7fe 149.54%
-          ),
-          linear-gradient(
-            315.75deg,
-            rgba(254, 189, 171, 0.74) 30.06%,
-            rgba(243, 169, 248, 0.66) 50.74%,
-            #e0d8f0 80.49%,
-            #eaf7fe 127.9%,
-            #eaf7fe 149.54%
-          );
+          315.75deg,
+          rgba(254, 189, 171, 0.74) 30.06%,
+          rgba(243, 169, 248, 0.66) 50.74%,
+          #e0d8f0 80.49%,
+          #eaf7fe 127.9%,
+          #eaf7fe 149.54%
+        ),
+        linear-gradient(
+          315.75deg,
+          rgba(254, 189, 171, 0.74) 30.06%,
+          rgba(243, 169, 248, 0.66) 50.74%,
+          #e0d8f0 80.49%,
+          #eaf7fe 127.9%,
+          #eaf7fe 149.54%
+        );
       border-radius: 5px;
 
       .scrollbar {
@@ -145,7 +147,13 @@
         background-color: #f1f3f2;
 
         &:hover {
-          background: linear-gradient(0deg, rgba(241,243,242,0) 0%, rgba(241,243,242,1) 25%, rgba(241,243,242,1) 75%, rgba(241,243,242,0) 100%);
+          background: linear-gradient(
+            0deg,
+            rgba(241, 243, 242, 0) 0%,
+            rgba(241, 243, 242, 1) 25%,
+            rgba(241, 243, 242, 1) 75%,
+            rgba(241, 243, 242, 0) 100%
+          );
         }
 
         .scrollbar-thumb {
@@ -153,13 +161,13 @@
           width: 115px;
           height: 6px;
           border: solid transparent 1px;
-          background: #FE9013;
+          background: #fe9013;
           border-radius: 5px;
           &:hover {
             background: #db7500;
           }
           &:active {
-            background: #4B9200;
+            background: #4b9200;
           }
         }
       }
