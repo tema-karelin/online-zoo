@@ -460,7 +460,6 @@ header nav a.logo:hover, header nav a.logo:active {
 }
 header nav a:hover {
   color: #c36800;
-  text-shadow: 4px 3px 7px rgba(249, 185, 75, 0.71);
 }
 header nav a:active {
   color: #4B9200;
@@ -1369,7 +1368,7 @@ footer .container .logo {
   justify-content: center;
   align-items: center;
   margin: 0 5px 0 0;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 2px;
   background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
 }
@@ -1420,57 +1419,51 @@ footer .container form {
 }
 footer .container form label h4 {
   width: 367px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 5px 0 19px 0;
 }
 footer .container form .email-area {
   display: flex;
   justify-content: flex-end;
 }
-footer .container form .email-area .email-in-container {
+footer .container form .email-area .email-in {
+  box-sizing: border-box;
   width: 228px;
   height: 42px;
   margin: 0 10px 0 0;
-  background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+  border: 1px solid #fe9013;
   border-radius: 4px;
-}
-footer .container form .email-area .email-in-container .email-in {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   padding: 0 0 0 10px;
-  border: 1px solid transparent;
-  border-radius: 4px;
   background: #111115;
-  background-clip: padding-box;
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
-footer .container form .email-area .email-in-container .email-in:focus-visible {
+footer .container form .email-area .email-in:active, footer .container form .email-area .email-in:focus-visible:valid {
   outline: none;
-  border: 1px solid #4B9200;
+  border: 1px solid #4b9200;
 }
-footer .container form .email-area .email-in-container .email-in:invalid {
-  border: 1px solid #D31414;
+footer .container form .email-area .email-in:invalid {
+  outline: none;
+  border: 1px solid #d31414;
+}
+footer .container form .email-area .email-in:active ~ .email-submit, footer .container form .email-area .email-in:focus-visible ~ .email-submit {
+  border: 1px solid #4b9200;
+  color: #4b9200;
+}
+footer .container form .email-area .email-in:invalid ~ .email-submit {
+  border: 1px solid #d31414;
+  color: #d31414;
 }
 footer .container form .email-area .email-submit {
   width: 129px;
   height: 42px;
-  background: #F1F3F2;
+  background: #f1f3f2;
   border: 1px solid #000;
   border-radius: 5px;
   color: #000;
 }
 footer .container form .email-area .email-submit:active {
-  border: 1px solid #4B9200;
-  color: #4B9200;
-}
-footer .container form .email-area .email-submit:disabled {
-  border: 1px solid #D31414;
-  color: #D31414;
-}
-footer .container form .email-area .email-submit:invalid {
-  border: 1px solid #D31414;
-  color: #D31414;
+  border: 1px solid #4b9200;
+  color: #4b9200;
 }
 footer .container .donate-for-volunteers {
   margin: 121px 0 0 0;
@@ -1517,11 +1510,10 @@ footer .container .contacts a {
   align-items: center;
   margin: 10px 0 0 0;
   padding: 0 0 0 0;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 footer .container .contacts a:hover {
   color: #c36800;
-  text-shadow: 4px 3px 7px rgba(249, 185, 75, 0.71);
 }
 footer .container .contacts a:hover .social-icon {
   background: #c36800;
@@ -1531,7 +1523,7 @@ footer .container .contacts a:active {
   text-shadow: none;
 }
 footer .container .contacts a:active .social-icon {
-  background: #4B9200;
+  background: #4b9200;
 }
 @media (min-width: 640px) and (max-width: 999px) {
   footer .container .contacts a {
@@ -1623,17 +1615,16 @@ footer .container .navigation-container nav {
 }
 footer .container .navigation-container nav a:hover {
   color: #c36800;
-  text-shadow: 4px 3px 7px rgba(249, 185, 75, 0.71);
 }
 footer .container .navigation-container nav a:active {
   color: #4B9200;
   text-shadow: none;
 }
 footer .container .navigation-container nav a.active {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #F9804B;
+  color: #f9804b;
 }
 footer .container .designed-by {
   position: absolute;
@@ -1647,7 +1638,6 @@ footer .container .designed-by {
 }
 footer .container .designed-by:hover {
   color: #c36800;
-  text-shadow: 4px 3px 7px rgba(249, 185, 75, 0.71);
 }
 footer .container .designed-by:active {
   color: #4B9200;
