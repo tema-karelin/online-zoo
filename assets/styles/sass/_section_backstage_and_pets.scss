@@ -20,7 +20,7 @@
 
 .backstage-and-pets {
   @include xl-min {
-    height: 1817px;
+    height: 1829px;
     background: no-repeat right 0px top 0px url(../../images/xl/flower_foto_backstage.png),
                 no-repeat left 0px bottom 0px url(../../images/xl/palm_foto_pets.png),
                 no-repeat right 0px bottom 0px url(../../images/xl/strelitzia_pets.png);
@@ -52,7 +52,7 @@
 
     @include xl-min {
       height: 403px;
-      margin-top: 128px;
+      margin-top: 140px;
     }
     @include lg-min {
       height: 427px;

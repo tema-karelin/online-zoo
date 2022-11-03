@@ -685,7 +685,7 @@ header nav .burger div {
 
 @media (min-width: 1600px) {
   .backstage-and-pets {
-    height: 1817px;
+    height: 1829px;
     background: no-repeat right 0px top 0px url(../../images/xl/flower_foto_backstage.png), no-repeat left 0px bottom 0px url(../../images/xl/palm_foto_pets.png), no-repeat right 0px bottom 0px url(../../images/xl/strelitzia_pets.png);
   }
 }
@@ -716,7 +716,7 @@ header nav .burger div {
 @media (min-width: 1600px) {
   .backstage-and-pets .backstage {
     height: 403px;
-    margin-top: 128px;
+    margin-top: 140px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1599px) {
