@@ -1,6 +1,5 @@
 footer {
   background: #111115;
-  
 
   @include xl-min {
     height: 443px;
@@ -41,29 +40,31 @@ footer {
       justify-content: center;
       align-items: center;
       margin: 0 5px 0 0;
-      border: 1px solid #FFFFFF;
+      border: 1px solid #ffffff;
       border-radius: 2px;
-      background: bottom 6px left 9px no-repeat url(../../icons/bamboo_white.png);
-  
+      background: bottom 6px left 9px no-repeat
+        url(../../icons/bamboo_white.png);
+
       @include sm-min {
         position: relative;
         width: 130px;
         height: auto;
         border: none;
-        background: bottom 5px left 74px no-repeat url(../../icons/bamboo_white.png);
+        background: bottom 5px left 74px no-repeat
+          url(../../icons/bamboo_white.png);
         order: 0;
       }
-  
+
       .logo-text {
         font-size: 19px;
         font-weight: 400;
         line-height: 120%;
         text-align: center;
         margin: 2px 0 0 0;
-        
+
         @include sm-min {
           margin: 1px -3px 0px 0px;
-        };
+        }
       }
     }
 
@@ -88,7 +89,7 @@ footer {
       label {
         h4 {
           width: 367px;
-          color: #FFFFFF;
+          color: #ffffff;
           margin: 5px 0 19px 0;
         }
       }
@@ -97,59 +98,51 @@ footer {
         display: flex;
         justify-content: flex-end;
 
-        .email-in-container {
+        .email-in {
+          box-sizing: border-box;
           width: 228px;
           height: 42px;
           margin: 0 10px 0 0;
-          background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
+          border: 1px solid #fe9013;
           border-radius: 4px;
+          padding: 0 0 0 10px;
+          background: #111115;
+          color: #bdbdbd;
 
-          .email-in {
-            box-sizing: border-box;
-            width: 100%;
-            height: 100%;
-            padding: 0 0 0 10px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            background: #111115;
-            background-clip: padding-box;
-            color: #BDBDBD;
+          &:active,
+          &:focus-visible:valid {
+            outline: none;
+            border: 1px solid #4b9200;
+          }
+          &:invalid {
+            outline: none;
+            border: 1px solid #d31414;
+          }
 
-            &:focus-visible {
-              outline: none;
-              border: 1px solid #4B9200;
-            }
-            &:invalid {
-              border: 1px solid #D31414;
-
-            }
+          &:active ~ .email-submit,
+          &:focus-visible ~ .email-submit {
+            border: 1px solid #4b9200;
+            color: #4b9200;
+          }
+          &:invalid ~ .email-submit {
+            border: 1px solid #d31414;
+            color: #d31414;
           }
         }
-        
         .email-submit {
           width: 129px;
           height: 42px;
-          background: #F1F3F2;
+          background: #f1f3f2;
           border: 1px solid #000;
           border-radius: 5px;
           color: #000;
 
           &:active {
-            border: 1px solid #4B9200;
-            color: #4B9200;
-          }
-          &:disabled {
-            border: 1px solid #D31414;
-            color: #D31414;
-          }
-          &:invalid {
-            border: 1px solid #D31414;
-            color: #D31414;
+            border: 1px solid #4b9200;
+            color: #4b9200;
           }
         }
-      } 
-
-      
+      }
     }
 
     .donate-for-volunteers {
@@ -192,8 +185,7 @@ footer {
         align-items: center;
         margin: 10px 0 0 0;
         padding: 0 0 0 0;
-        color: #FFFFFF;
-
+        color: #ffffff;
 
         @include link_hover {
           & .social-icon {
@@ -202,7 +194,7 @@ footer {
         }
         @include link_active {
           & .social-icon {
-            background: #4B9200;
+            background: #4b9200;
           }
         }
 
@@ -240,7 +232,6 @@ footer {
           }
         }
       }
-      
     }
     .navigation-container {
       position: absolute;
@@ -262,7 +253,7 @@ footer {
         margin: 27px 0 0 0;
         order: 4;
       }
-      
+
       nav {
         display: flex;
         justify-content: space-between;
@@ -280,17 +271,21 @@ footer {
           width: 100%;
           padding: 0 11px;
         }
-        
+
         a {
           @include link_hover;
           @include link_active;
         }
 
         a.active {
-          background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+          background: linear-gradient(
+            113.96deg,
+            #f9804b 1.49%,
+            #fe9013 101.44%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          color: #F9804B;
+          color: #f9804b;
         }
       }
     }
@@ -319,6 +314,4 @@ footer {
       }
     }
   }
-
-  
 }

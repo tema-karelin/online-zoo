@@ -10,7 +10,7 @@
 @mixin link_hover {
   &:hover {
     color: #c36800;
-    text-shadow: 4px 3px 7px rgb(249 185 75 / 71%);
+    // text-shadow: 4px 3px 7px rgb(249 185 75 / 71%);
     @content
   }
 };
