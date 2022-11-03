@@ -918,8 +918,6 @@ header nav .burger div {
   border-radius: 5px 5px 0 0;
   top: 0;
   left: 0;
-  background: no-repeat center url(../../images/animals/penguin.jpg);
-  background-size: cover;
 }
 .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card .pets-descr {
   margin: 10px 0 0 0;
@@ -1247,11 +1245,7 @@ header nav .burger div {
   border-radius: 20px;
   background-color: #f1f3f2;
   background-clip: padding-box;
-  padding: 15px 15px 20px 15px;
-  overflow-y: scroll;
-}
-.testimonials .container .feedback .feedback-card-container .feedback-card::-webkit-scrollbar {
-  width: 0;
+  padding: 15px;
 }
 .testimonials .container .feedback .feedback-card-container .feedback-card .feedback-card-header {
   width: 100%;
@@ -1273,13 +1267,20 @@ header nav .burger div {
   color: #000;
 }
 .testimonials .container .feedback .feedback-card-container .feedback-card .feedback-card-header p.info {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 .testimonials .container .feedback .feedback-card-container .feedback-card p {
   font-weight: 300;
   font-size: 15px;
   line-height: 120%;
   color: #767474;
+}
+.testimonials .container .feedback .feedback-card-container .feedback-card p.feedback-text {
+  height: 308px;
+  overflow-y: scroll;
+}
+.testimonials .container .feedback .feedback-card-container .feedback-card p.feedback-text::-webkit-scrollbar {
+  width: 0;
 }
 .testimonials .container .scrollbar-container {
   width: 600px;
@@ -1306,14 +1307,14 @@ header nav .burger div {
   width: 115px;
   height: 6px;
   border: solid transparent 1px;
-  background: #FE9013;
+  background: #fe9013;
   border-radius: 5px;
 }
 .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb:hover {
   background: #db7500;
 }
 .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb:active {
-  background: #4B9200;
+  background: #4b9200;
 }
 
 footer {
