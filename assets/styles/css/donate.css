@@ -534,7 +534,7 @@ header nav .burger div {
 @media (min-width: 1600px) {
   .favorite-animal-donate {
     height: 390px;
-    margin-top: 80px;
+    margin-top: 76px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1599px) {
@@ -557,7 +557,12 @@ header nav .burger div {
 }
 
 .pick-and-feed-donate {
-  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 0;
 }
 @media (min-width: 1600px) {
   .pick-and-feed-donate {
@@ -578,6 +583,262 @@ header nav .burger div {
   .pick-and-feed-donate {
     height: 1145px;
   }
+}
+.pick-and-feed-donate p {
+  line-height: 130%;
+}
+.pick-and-feed-donate h4, .pick-and-feed-donate > p {
+  box-sizing: border-box;
+  width: 100%;
+}
+.pick-and-feed-donate h2 {
+  color: #fe9013;
+}
+.pick-and-feed-donate h3 {
+  font-weight: 400;
+  margin: 0 0 0 0;
+}
+.pick-and-feed-donate .text-container {
+  margin: 54px 0 0 0;
+  color: #fff;
+}
+.pick-and-feed-donate .text-container p {
+  box-sizing: border-box;
+  padding: 0 15px 0 0;
+  margin: 24px 0 0 0;
+  line-height: 140%;
+}
+.pick-and-feed-donate .text-container h3:last-child {
+  margin: 58px 0 0 0;
+  color: #fe9013;
+}
+.pick-and-feed-donate .feed-container {
+  box-sizing: border-box;
+  height: 964px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  margin: 0 0 180px 0;
+  padding: 0 92px;
+}
+.pick-and-feed-donate .feed-container .arounded-button, .pick-and-feed-donate .feed-container .squared-button {
+  border: none;
+}
+.pick-and-feed-donate .feed-container h2 {
+  margin: 40px 13px 0 0;
+}
+.pick-and-feed-donate .feed-container h4 {
+  margin: 25px 0 0 0;
+}
+.pick-and-feed-donate .feed-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 65px 0 0 0;
+}
+.pick-and-feed-donate .feed-container form .feed-size-image {
+  width: 550px;
+  height: 246px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pick-and-feed-donate .feed-container form .feed-size-image .diet-descr {
+  position: relative;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 38px 88px 0 0;
+}
+.pick-and-feed-donate .feed-container form .feed-size-image .diet-descr .days-diet-amount {
+  font-size: 72px;
+  font-weight: 500;
+  margin: 0 0 -6px 0;
+}
+.pick-and-feed-donate .feed-container form .feed-size-image .diet-descr .x {
+  position: absolute;
+  right: -25px;
+  top: 37%;
+  font-size: 2em;
+  font-weight: 400;
+}
+.pick-and-feed-donate .feed-container form .feed-size-image .animals-widget {
+  width: 284px;
+  height: 246px;
+  background: url("../../images/animals_widgets/panda_widget1.png");
+  margin: 0 16px 0 0;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 162px;
+  margin: 50px 0 0 0;
+  padding: 0 0 0 0;
+  border: none;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount legend {
+  margin: 0 0 0 2px;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox {
+  position: absolute;
+  display: none;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-5000:checked ~ .checkbox-range .amount-label.amount-5000 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-2000:checked ~ .checkbox-range .amount-label.amount-2000 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-1000:checked ~ .checkbox-range .amount-label.amount-1000 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-500:checked ~ .checkbox-range .amount-label.amount-500 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-250:checked ~ .checkbox-range .amount-label.amount-250 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-100:checked ~ .checkbox-range .amount-label.amount-100 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-50:checked ~ .checkbox-range .amount-label.amount-50 .real-styled-checkbox::before, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-25:checked ~ .checkbox-range .amount-label.amount-25 .real-styled-checkbox::before {
+  box-sizing: border-box;
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border: 2px solid #fe9013;
+  border-radius: 100%;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-5000:checked ~ .checkbox-range .amount-label.amount-5000 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-2000:checked ~ .checkbox-range .amount-label.amount-2000 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-1000:checked ~ .checkbox-range .amount-label.amount-1000 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-500:checked ~ .checkbox-range .amount-label.amount-500 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-250:checked ~ .checkbox-range .amount-label.amount-250 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-100:checked ~ .checkbox-range .amount-label.amount-100 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-50:checked ~ .checkbox-range .amount-label.amount-50 .real-styled-checkbox::after, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-25:checked ~ .checkbox-range .amount-label.amount-25 .real-styled-checkbox::after {
+  box-sizing: border-box;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  border: 2px solid #fe9013;
+  border-radius: 100%;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-5000:checked ~ .checkbox-range .amount-label.amount-5000 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-2000:checked ~ .checkbox-range .amount-label.amount-2000 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-1000:checked ~ .checkbox-range .amount-label.amount-1000 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-500:checked ~ .checkbox-range .amount-label.amount-500 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-250:checked ~ .checkbox-range .amount-label.amount-250 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-100:checked ~ .checkbox-range .amount-label.amount-100 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-50:checked ~ .checkbox-range .amount-label.amount-50 .real-styled-checkbox p, .pick-and-feed-donate .feed-container form fieldset.amount .amount-checkbox#amount-25:checked ~ .checkbox-range .amount-label.amount-25 .real-styled-checkbox p {
+  color: #fe9013;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .checkbox-range-background {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 27px;
+  top: 18px;
+  display: flex;
+  align-items: center;
+  background: #404950;
+  border-radius: 2px;
+  padding: 0 31px;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .checkbox-range-background > div {
+  width: 100%;
+  height: 2px;
+  background: #72828e;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .amount-label {
+  width: 62px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .amount-label .real-styled-checkbox {
+  box-sizing: border-box;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #ffee2e;
+  margin: 26px 0 0 0;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .amount-label .real-styled-checkbox p {
+  position: absolute;
+  font-size: 26px;
+  font-weight: 500;
+  color: #404950;
+  top: 33px;
+  left: -27px;
+}
+.pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .amount-label .real-styled-checkbox p span {
+  font-size: 22px;
+}
+.pick-and-feed-donate .feed-container form label[for=another-amount] {
+  position: relative;
+}
+.pick-and-feed-donate .feed-container form #another-amount {
+  box-sizing: border-box;
+  position: relative;
+  width: 268px;
+  height: 54px;
+  background: transparent;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  color: #929699;
+  padding: 0 0 0 7px;
+  -moz-appearance: textfield;
+}
+.pick-and-feed-donate .feed-container form #another-amount::-webkit-inner-spin-button, .pick-and-feed-donate .feed-container form #another-amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.pick-and-feed-donate .feed-container form #another-amount ~ span {
+  position: absolute;
+  top: 18px;
+  right: 9px;
+  color: #929699;
+  font-size: 21px;
+  font-weight: 500;
+}
+.pick-and-feed-donate .feed-container form #another-amount:active, .pick-and-feed-donate .feed-container form #another-amount:focus-visible:valid {
+  outline: none;
+  border: 1px solid #4b9200;
+  color: #4b9200;
+}
+.pick-and-feed-donate .feed-container form #another-amount:active ~ span, .pick-and-feed-donate .feed-container form #another-amount:focus-visible:valid ~ span {
+  color: #4b9200;
+}
+.pick-and-feed-donate .feed-container form #another-amount:invalid {
+  outline: none;
+  border: 1px solid #d31414;
+  color: #d31414;
+}
+.pick-and-feed-donate .feed-container form #another-amount:invalid ~ span {
+  color: #d31414;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio {
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin: 22px 15px 20px 0;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio input {
+  display: none;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio input#monthly:checked ~ label[for=monthly]::before, .pick-and-feed-donate .feed-container form fieldset.period-radio input#once:checked ~ label[for=once]::before {
+  background: #4b9200;
+  border: none;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio label:first-of-type {
+  margin-right: 50px;
+}
+.pick-and-feed-donate .feed-container form fieldset.period-radio label::before {
+  box-sizing: border-box;
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FE9013;
+  border-radius: 100%;
+  margin: 0 10px 0 0;
+}
+.pick-and-feed-donate .feed-container a {
+  color: #333B41;
+  margin: 31px 0 0 3px;
 }
 
 footer {
