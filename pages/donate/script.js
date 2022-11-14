@@ -39,7 +39,6 @@ function amountCheck() {
     console.log('Amount value chenged by radio:', amount);
   } else {
     let inputAmount = Number(document.querySelector('#another-amount').value);
-    console.log(inputAmount);
     if (inputAmount < 10000 && inputAmount >= 1) {
       let radioElement;
 
@@ -56,6 +55,7 @@ function amountCheck() {
         }
       }
     }
+    amount = inputAmount;
   }
 }
 
