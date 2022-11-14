@@ -247,7 +247,15 @@
               // border: 4px solid transparent;
               // outline: 2px solid transparent;
               
-
+              .tap-area {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                border: 1px solid black;
+                background: transparent;
+                top: -25px;
+                right: -25px;
+              }
               p {
                 position: absolute;
                 font-size: 26px;
