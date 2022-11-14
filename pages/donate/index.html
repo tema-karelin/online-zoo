@@ -41,7 +41,6 @@
 
     <section class="favorite-animal-donate">
       <div class="container">
-        
       </div>
     </section>
 
@@ -56,14 +55,82 @@
         <h4>We know the animals bring you joy, and in these extraordinary times, we’re glad.</h4>
         <form action="get">
           <div class="feed-size-image">
-
+            <div class="diet-descr">
+              <p class="days-diet-amount">4</p>
+              <p>Panda diet for the day.</p>
+              <div class="x">&#215;</div>
+            </div>
+            <!-- <div class="x">&#215;</div> -->
+            <div class="animals-widget"></div>
           </div>
-          <label for="amount">
-            <input id="amount" type="" >
+          <fieldset class="amount">
+            <legend>Amount</legend>
+            <input type="radio" name="amount-checkbox" value="5000" id="amount-5000" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="2000" id="amount-2000" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="1000" id="amount-1000" class="amount-checkbox" checked>
+            <input type="radio" name="amount-checkbox" value="500" id="amount-500" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="250" id="amount-250" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="100" id="amount-100" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="50" id="amount-50" class="amount-checkbox">
+            <input type="radio" name="amount-checkbox" value="25" id="amount-25" class="amount-checkbox">
+            <div class="checkbox-range">
+              <div class="checkbox-range-background">
+                <div></div>
+              </div>
+              <label for="amount-5000" class="amount-label amount-5000">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>5000</p>
+                </div>
+              </label>
+              <label for="amount-2000" class="amount-label amount-2000">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>2000</p>
+                </div>
+              </label>
+              <label for="amount-1000" class="amount-label amount-1000">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>1000</p>
+                </div>
+              </label>
+              <label for="amount-500" class="amount-label amount-500">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>500</p>
+                </div>
+              </label>
+              <label for="amount-250" class="amount-label amount-250">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>250</p>
+                </div>
+              </label>
+              <label for="amount-100" class="amount-label amount-100">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>100</p>
+                </div>
+              </label>
+              <label for="amount-50" class="amount-label amount-50">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>50</p>
+                </div>
+              </label>
+              <label for="amount-25" class="amount-label amount-25">
+                <div class="real-styled-checkbox">
+                  <p><span>$</span>25</p>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+          <label for="another-amount">
+            <input type="number" id="another-amount" min="1" max="9999" placeholder="Another amount">
+            <span>$</span>
           </label>
-          <input type="" id="another-amount">
-          <input type="radio" name="monthly" id="monthly">
-          <input type="radio" name="once" id="once">
+          
+          <fieldset class="period-radio">
+            <input type="radio" name="period" id="monthly" value="12">
+            <label for="monthly">Monthly</label>
+            <input type="radio" name="period" id="once" value="1" checked>
+            <label for="once">Once</label>
+          </fieldset>
+          
           <input class="arounded-button" type="submit" value="Feed a friend now">
         </form>
         <a>Share with your friends on social networks</a>
@@ -138,6 +205,7 @@
         >
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
 
