@@ -128,9 +128,11 @@ header {
   @include md-min {
     top: 0;
     height: 34px;
+    position: fixed;
   }
   @include sm-min {
     top: 0;
     height: 34px;
+    position: fixed;
   }
 }
