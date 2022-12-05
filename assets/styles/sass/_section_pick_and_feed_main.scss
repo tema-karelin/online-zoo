@@ -156,6 +156,7 @@
       }
 
       .step {
+        position: relative;
         display: flex;
         width: 168px;
         height: 244px;
@@ -171,6 +172,7 @@
           background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
           border-radius: 5px;
           margin: 0 0 32px 0;
+          z-index: 50;
           @include sm {
             margin: 0 0 11px 0;
           }
@@ -205,13 +207,28 @@
         width: 70px;
         height: 100%;
         background: no-repeat 0 30% url(../../images/feed/arrow.png);
+        z-index: 100;
         @include md {
-          background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+          display: none;
         }
         @include sm {
           display: none;
-          height: 70px;
-          background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+        }
+      }
+      .arrow-small {
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: -16px;
+        right: -68px;
+        background: no-repeat url(../../images/feed/arrow-for-sm.png);
+        z-index: 100;
+        @include md {
+          display: initial;
+        }
+        @include sm {
+          display: initial;
         }
       }
     }

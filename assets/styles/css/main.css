@@ -1258,6 +1258,7 @@ header nav .burger div {
   }
 }
 .pick-and-feed .container .feed-steps .step {
+  position: relative;
   display: flex;
   width: 168px;
   height: 244px;
@@ -1275,6 +1276,7 @@ header nav .burger div {
   background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
   border-radius: 5px;
   margin: 0 0 32px 0;
+  z-index: 50;
 }
 @media (min-width: 0px) and (max-width: 320px) {
   .pick-and-feed .container .feed-steps .step .step-image-container {
@@ -1308,17 +1310,36 @@ header nav .burger div {
   width: 70px;
   height: 100%;
   background: no-repeat 0 30% url(../../images/feed/arrow.png);
+  z-index: 100;
 }
 @media (min-width: 321px) and (max-width: 640px) {
   .pick-and-feed .container .feed-steps .arrow {
-    background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+    display: none;
   }
 }
 @media (min-width: 0px) and (max-width: 320px) {
   .pick-and-feed .container .feed-steps .arrow {
     display: none;
-    height: 70px;
-    background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+  }
+}
+.pick-and-feed .container .feed-steps .arrow-small {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -16px;
+  right: -68px;
+  background: no-repeat url(../../images/feed/arrow-for-sm.png);
+  z-index: 100;
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container .feed-steps .arrow-small {
+    display: initial;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container .feed-steps .arrow-small {
+    display: initial;
   }
 }
 
