@@ -1334,16 +1334,22 @@ header nav .burger div {
 @media (min-width: 641px) and (max-width: 1000px) {
   .testimonials {
     height: 842px;
+    padding: 100px 30px 0 30px;
+    background: no-repeat bottom -17% right url(../../images/lg/leav_foto.png);
   }
 }
 @media (min-width: 321px) and (max-width: 640px) {
   .testimonials {
     height: 668px;
+    padding: 60px 20px 0 20px;
+    background: no-repeat bottom -15% right url(../../images/md/leav_foto.png);
   }
 }
 @media (min-width: 0px) and (max-width: 320px) {
   .testimonials {
     height: 580px;
+    padding: 21px 10px 0 10px;
+    background: no-repeat bottom -6% right url(../../images/sm/leav_foto.png);
   }
 }
 .testimonials .container {
@@ -1352,6 +1358,22 @@ header nav .burger div {
   justify-content: flex-start;
   width: 100%;
   height: 100%;
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .testimonials .container {
+    align-items: center;
+  }
+  .testimonials .container .squared-button {
+    width: 240px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .testimonials .container {
+    align-items: center;
+  }
+  .testimonials .container .squared-button {
+    width: 240px;
+  }
 }
 .testimonials .container h3 {
   font-weight: 400;
@@ -1366,6 +1388,29 @@ header nav .burger div {
   overflow-y: hidden;
   margin: 61px 0 21px 0;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container .feedback {
+    margin: 44px 0 20px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .testimonials .container .feedback {
+    flex-direction: column;
+    height: 357px;
+    margin: 44px 0 40px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .testimonials .container .feedback {
+    flex-direction: column;
+    height: 357px;
+    margin: 25px 0 30px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
 .testimonials .container .feedback::-webkit-scrollbar {
   display: none;
 }
@@ -1377,6 +1422,25 @@ header nav .burger div {
   border-radius: 20px;
   margin: 0 29px 0 0;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container .feedback .feedback-card-container {
+    min-width: 293px;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .testimonials .container .feedback .feedback-card-container {
+    width: 100%;
+    height: 109px;
+    margin: 0 0 15px 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .testimonials .container .feedback .feedback-card-container {
+    width: 100%;
+    height: 109px;
+    margin: 0 0 15px 0;
+  }
+}
 .testimonials .container .feedback .feedback-card-container .feedback-card {
   box-sizing: border-box;
   width: 100%;
@@ -1386,6 +1450,23 @@ header nav .burger div {
   background-color: #f1f3f2;
   background-clip: padding-box;
   padding: 15px;
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .testimonials .container .feedback .feedback-card-container .feedback-card {
+    overflow-y: scroll;
+  }
+  .testimonials .container .feedback .feedback-card-container .feedback-card::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .testimonials .container .feedback .feedback-card-container .feedback-card {
+    padding: 8px 10px 0 10px;
+    overflow-y: scroll;
+  }
+  .testimonials .container .feedback .feedback-card-container .feedback-card::-webkit-scrollbar {
+    display: none;
+  }
 }
 .testimonials .container .feedback .feedback-card-container .feedback-card .feedback-card-header {
   width: 100%;
@@ -1430,6 +1511,21 @@ header nav .burger div {
   background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   border-radius: 5px;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container .scrollbar-container {
+    margin: 0 0 52px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .testimonials .container .scrollbar-container {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .testimonials .container .scrollbar-container {
+    display: none;
+  }
+}
 .testimonials .container .scrollbar-container .scrollbar {
   box-sizing: border-box;
   width: 100%;
@@ -1455,6 +1551,11 @@ header nav .burger div {
 }
 .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb:active {
   background: #4b9200;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb {
+    width: 75px;
+  }
 }
 
 footer {

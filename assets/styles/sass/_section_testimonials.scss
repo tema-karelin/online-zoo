@@ -5,12 +5,18 @@
   }
   @include lg {
     height: 842px;
+    padding: 100px 30px 0 30px;
+    background: no-repeat bottom -17% right url(../../images/lg/leav_foto.png);
   }
   @include md {
     height: 668px;
+    padding: 60px 20px 0 20px;
+    background: no-repeat bottom -15% right url(../../images/md/leav_foto.png);
   }
   @include sm {
     height: 580px;
+    padding: 21px 10px 0 10px;
+    background: no-repeat bottom -6% right url(../../images/sm/leav_foto.png);
   }
 
   padding: 140px 0 180px 0;
@@ -21,6 +27,19 @@
     justify-content: flex-start;
     width: 100%;
     height: 100%;
+
+    @include md {
+      align-items: center;
+      .squared-button {
+        width: 240px;
+      }
+    }
+    @include sm {
+      align-items: center;
+      .squared-button {
+        width: 240px;
+      }
+    }
 
     h3 {
       font-weight: 400;
@@ -35,6 +54,24 @@
       overflow-x: scroll;
       overflow-y: hidden;
       margin: 61px 0 21px 0;
+
+      @include lg {
+        margin: 44px 0 20px 0;
+      }
+      @include md {
+        flex-direction: column;
+        height: 357px;
+        margin: 44px 0 40px 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      @include sm {
+        flex-direction: column;
+        height: 357px;
+        margin: 25px 0 30px 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -62,6 +99,19 @@
           );
         border-radius: 20px;
         margin: 0 29px 0 0;
+        @include lg {
+          min-width: 293px;
+        }
+        @include md {
+          width: 100%;
+          height: 109px;
+          margin: 0 0 15px 0;
+        }
+        @include sm {
+          width: 100%;
+          height: 109px;
+          margin: 0 0 15px 0;
+        }
 
         .feedback-card {
           box-sizing: border-box;
@@ -72,6 +122,22 @@
           background-color: #f1f3f2;
           background-clip: padding-box;
           padding: 15px;
+
+          @include md {
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          @include sm {
+            padding: 8px 10px 0 10px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
 
           .feedback-card-header {
             width: 100%;
@@ -137,6 +203,16 @@
         );
       border-radius: 5px;
 
+      @include lg {
+        margin: 0 0 52px 0;
+      }
+      @include md {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
+
       .scrollbar {
         box-sizing: border-box;
         width: 100%;
@@ -168,6 +244,9 @@
           }
           &:active {
             background: #4b9200;
+          }
+          @include lg {
+            width: 75px;
           }
         }
       }
