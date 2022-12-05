@@ -1075,16 +1075,19 @@ header nav .burger div {
 @media (min-width: 641px) and (max-width: 1000px) {
   .pick-and-feed {
     height: 876px;
+    padding: 30px 30px 50px 30px;
   }
 }
 @media (min-width: 321px) and (max-width: 640px) {
   .pick-and-feed {
     height: 781px;
+    padding: 20px 0px 20px 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 320px) {
   .pick-and-feed {
     height: 1082px;
+    padding: 20px 10px 20px 10px;
   }
 }
 .pick-and-feed .container {
@@ -1098,24 +1101,99 @@ header nav .burger div {
   backdrop-filter: blur(2px);
   border-radius: 20px;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .pick-and-feed .container {
+    padding: 30px 7px 50px 7px;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container {
+    padding: 10px 7px 50px 7px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container {
+    padding: 21px 7px 0px 7px;
+  }
+  .pick-and-feed .container .arounded-button, .pick-and-feed .container .squared-button {
+    margin: 0 0 0 -2px;
+  }
+}
 .pick-and-feed .container p {
   line-height: 130%;
 }
 .pick-and-feed .container h4 {
   margin: 35px 0 0 0;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .pick-and-feed .container h4 {
+    margin: 25px 0 0 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container h4 {
+    margin: 25px 0 0 0;
+    line-height: 100%;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container h4 {
+    font-size: 1.125rem;
+    padding: 0 0 0 0;
+    margin: 12px 0 0 0;
+    text-align: center;
+    line-height: 120%;
+  }
+}
 .pick-and-feed .container h4, .pick-and-feed .container > p {
   box-sizing: border-box;
   width: 100%;
   padding: 0 0 0 42px;
 }
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container h4, .pick-and-feed .container > p {
+    padding: 0 0 0 13px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container h4, .pick-and-feed .container > p {
+    padding: 0 0 0 0;
+  }
+}
 .pick-and-feed .container p.during {
   font-weight: 500;
   margin: 46px 0 0 0;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .pick-and-feed .container p.during {
+    margin: 26px 0 0 0;
+    padding: 0 80px 0px 42px;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container p.during {
+    margin: 22px 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container p.during {
+    display: none;
+  }
+}
 .pick-and-feed .container p.even {
   margin: 11px 0 0 0;
-  padding: 0 136px 0 42px;
+  padding: 0 42px 0 42px;
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container p.even {
+    padding: 0 0 0 13px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container p.even {
+    display: none;
+  }
 }
 .pick-and-feed .container p.even a {
   color: #333B41;
@@ -1127,9 +1205,30 @@ header nav .burger div {
   color: #FE9013;
   margin: 0px 0 0 0;
 }
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+}
 .pick-and-feed .container h3 {
   font-weight: 400;
   margin: 73px 0 0 0;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .pick-and-feed .container h3 {
+    margin: 53px 0 0 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container h3 {
+    margin: 43px 0 0 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container h3 {
+    margin: 23px 0 0 0;
+  }
 }
 .pick-and-feed .container .feed-steps {
   display: flex;
@@ -1138,6 +1237,26 @@ header nav .burger div {
   justify-content: space-between;
   margin: 54px 0 60px 0;
 }
+@media (min-width: 641px) and (max-width: 1000px) {
+  .pick-and-feed .container .feed-steps {
+    margin: 54px 0 70px 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container .feed-steps {
+    box-sizing: border-box;
+    margin: 34px 0px 40px 0;
+    padding: 0 25px 0 13px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container .feed-steps {
+    flex-direction: column;
+    align-items: center;
+    height: 737px;
+    margin: 25px 0px 17px 0;
+  }
+}
 .pick-and-feed .container .feed-steps .step {
   display: flex;
   width: 168px;
@@ -1145,12 +1264,22 @@ header nav .burger div {
   flex-direction: column;
   justify-content: flex-start;
 }
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container .feed-steps .step {
+    margin: 0 0 0 0;
+  }
+}
 .pick-and-feed .container .feed-steps .step .step-image-container {
   width: 168px;
   height: 168px;
   background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
   border-radius: 5px;
   margin: 0 0 32px 0;
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container .feed-steps .step .step-image-container {
+    margin: 0 0 11px 0;
+  }
 }
 .pick-and-feed .container .feed-steps .step .step-image-container .step-image {
   box-sizing: border-box;
@@ -1179,6 +1308,18 @@ header nav .burger div {
   width: 70px;
   height: 100%;
   background: no-repeat 0 30% url(../../images/feed/arrow.png);
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed .container .feed-steps .arrow {
+    background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .pick-and-feed .container .feed-steps .arrow {
+    display: none;
+    height: 70px;
+    background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+  }
 }
 
 .testimonials {

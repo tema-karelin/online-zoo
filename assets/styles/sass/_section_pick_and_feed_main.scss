@@ -7,12 +7,15 @@
   }
   @include lg {
     height: 876px;
+    padding: 30px 30px 50px 30px;
   }
   @include md {
     height: 781px;
+    padding: 20px 0px 20px 0px;
   }
   @include sm {
     height: 1082px;
+    padding: 20px 10px 20px 10px;
   }
 
   .container {
@@ -30,24 +33,73 @@
     backdrop-filter: blur(2px);
     border-radius: 20px;
 
+    @include lg {
+      padding: 30px 7px 50px 7px;
+    }
+    @include md {
+      padding: 10px 7px 50px 7px;
+    }
+    @include sm {
+      padding: 21px 7px 0px 7px;
+      .arounded-button {
+        margin: 0 0 0 -2px;
+      }
+    }
+
     p {
       line-height: 130%;
     }
     h4 {
       margin: 35px 0 0 0;
+      @include lg {
+        margin: 25px 0 0 0;
+      }@include md {
+        margin: 25px 0 0 0;
+        line-height: 100%;
+        letter-spacing: -0.9px;
+      }
+      @include sm {
+        font-size: 1.125rem;
+        padding: 0 0 0 0;
+        margin: 12px 0 0 0;
+        text-align: center;
+        line-height: 120%;
+      }
     }
     h4, &>p {
       box-sizing: border-box;
       width: 100%;
       padding: 0 0 0 42px;
+      @include md {
+        padding: 0 0 0 13px;
+      }
+      @include sm {
+        padding: 0 0 0 0;
+      }
     }
     p.during {
       font-weight: 500;
       margin: 46px 0 0 0;
+      @include lg {
+        margin: 26px 0 0 0;
+        padding: 0 80px 0px 42px;
+      }
+      @include md {
+        margin: 22px 0 0 0;
+      }
+      @include sm {
+        display: none;
+      }
     }
     p.even {
       margin: 11px 0 0 0;
-      padding: 0 136px 0 42px;
+      padding: 0 42px 0 42px;
+      @include md {
+        padding: 0 0 0 13px;
+      }
+      @include sm {
+        display: none;
+      }
       a {
         color: #333B41;
         text-decoration: underline;
@@ -58,10 +110,25 @@
     h2 {
       color: #FE9013;
       margin: 0px 0 0 0;
+      @include md {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+      @include sm {
+      }
     }
     h3 {
       font-weight: 400;
       margin: 73px 0 0 0;
+      @include lg {
+        margin: 53px 0 0 0;
+      }
+      @include md {
+        margin: 43px 0 0 0;
+      }
+      @include sm {
+        margin: 23px 0 0 0;
+      }
     }
 
     .feed-steps {
@@ -73,12 +140,30 @@
 
       margin: 54px 0 60px 0;
 
+      @include lg {
+        margin: 54px 0 70px 0;
+      }
+      @include md {
+        box-sizing: border-box;
+        margin: 34px 0px 40px 0;
+        padding: 0 25px 0 13px;
+      }
+      @include sm {
+        flex-direction: column;
+        align-items: center;
+        height: 737px;
+        margin: 25px 0px 17px 0;
+      }
+
       .step {
         display: flex;
         width: 168px;
         height: 244px;
         flex-direction: column;
         justify-content: flex-start;
+        @include sm {
+          margin: 0 0 0 0;
+        }
 
         .step-image-container {
           width: 168px;
@@ -86,6 +171,9 @@
           background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
           border-radius: 5px;
           margin: 0 0 32px 0;
+          @include sm {
+            margin: 0 0 11px 0;
+          }
 
           .step-image {
             box-sizing: border-box;
@@ -117,7 +205,16 @@
         width: 70px;
         height: 100%;
         background: no-repeat 0 30% url(../../images/feed/arrow.png);
+        @include md {
+          background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+        }
+        @include sm {
+          display: none;
+          height: 70px;
+          background: no-repeat 0 30% url(../../images/feed/arrow-for-sm.png);
+        }
       }
     }
+    
   }
 }
