@@ -90,7 +90,9 @@ body {
     }
   }
 
-  
+  &.popup {
+    overflow: hidden;
+  }
   &::-webkit-scrollbar { 
     width: 0;
   }

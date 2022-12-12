@@ -345,6 +345,9 @@ body h4 {
     font-size: 1.5rem;
   }
 }
+body.popup {
+  overflow: hidden;
+}
 body::-webkit-scrollbar {
   width: 0;
 }
@@ -388,7 +391,7 @@ header nav a {
   font-weight: 500;
   line-height: 140%;
 }
-@media (min-width: 640px) and (max-width: 999px) {
+@media (min-width: 321px) and (max-width: 640px) {
   header nav a {
     display: none;
   }
@@ -421,7 +424,7 @@ header nav a.logo {
     margin: 0 15px 0 0;
   }
 }
-@media (min-width: 640px) and (max-width: 999px) {
+@media (min-width: 321px) and (max-width: 640px) {
   header nav a.logo {
     width: 47px;
     height: 30px;
@@ -444,7 +447,7 @@ header nav a.logo .logo-text {
   text-align: center;
   margin: 2px 0 0 0;
 }
-@media (min-width: 640px) and (max-width: 999px) {
+@media (min-width: 321px) and (max-width: 640px) {
   header nav a.logo .logo-text {
     font-size: 12px;
   }
@@ -487,13 +490,14 @@ header nav .burger {
   justify-content: space-between;
   padding: 6px;
   margin-right: -6px;
+  transition: transform 0.1s;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1001px) {
   header nav .burger {
     display: none;
   }
 }
-@media (min-width: 1000px) and (max-width: 1599px) {
+@media (min-width: 641px) and (max-width: 1000px) {
   header nav .burger {
     display: none;
   }
@@ -503,6 +507,9 @@ header nav .burger div {
   height: 2px;
   background: #fff;
   border-radius: 2px;
+}
+header nav .burger:active {
+  transform: rotate(90deg);
 }
 @media (min-width: 1001px) {
   header {
@@ -514,7 +521,7 @@ header nav .burger div {
     height: 80px;
   }
 }
-@media (min-width: 640px) and (max-width: 999px) {
+@media (min-width: 321px) and (max-width: 640px) {
   header {
     top: 0;
     height: 34px;
@@ -526,6 +533,100 @@ header nav .burger div {
     top: 0;
     height: 34px;
     position: fixed;
+  }
+}
+
+.nav-menu-section {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 300;
+  padding: 0;
+  transition: background-color 1s;
+}
+.nav-menu-section.menu-display-flex {
+  display: flex;
+}
+.nav-menu-section.menu-active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-menu-section .nav-menu {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 329px;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  padding: 10px;
+  transition: left 1s;
+}
+.nav-menu-section .nav-menu.menu-active {
+  left: 0;
+}
+.nav-menu-section .nav-menu a {
+  font-weight: 500;
+  line-height: 140%;
+  color: #333B41;
+  margin: 0 0 15px 0;
+}
+.nav-menu-section .nav-menu a.active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #F9804B;
+}
+.nav-menu-section .nav-menu a.logo {
+  box-sizing: border-box;
+  width: 66px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 30px 0;
+  border: 1px solid #FE9013;
+  border-radius: 2px;
+  background: bottom 5px left 7px no-repeat url(../../icons/bamboo_orange.png);
+  color: #FE9013;
+}
+.nav-menu-section .nav-menu a.logo .logo-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  margin: 2px 0 0 0;
+}
+.nav-menu-section .nav-menu a.logo:hover, .nav-menu-section .nav-menu a.logo:active {
+  color: #FE9013;
+  text-shadow: none;
+}
+.nav-menu-section .close {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  height: 40px;
+  width: 40px;
+  background: no-repeat center url(../../icons/x_icon.png);
+  transition: right 1s;
+}
+.nav-menu-section .close.menu-active {
+  right: 0;
+}
+@media (min-width: 1001px) {
+  .nav-menu-section {
+    display: none;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .nav-menu-section {
+    display: none;
   }
 }
 

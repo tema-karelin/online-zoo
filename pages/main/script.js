@@ -213,6 +213,42 @@ for (let i = 0; i<testimonials.length; i++) {
 }
 
 
+// Header menu
+const BODY = document.querySelector('body');
+const BURGER_BUTTON = document.querySelector('.burger');
+const NAV_MENU_SECTION = document.querySelector('.nav-menu-section');
+const CLOSE_MENU_BUTTON = document.querySelector('.nav-menu-section .close');
+const NAV_MENU = document.querySelector('.nav-menu');
+
+
+
+
+
+const openMenu = function () {
+  console.log("openMenu")
+  setTimeout(() => {
+    NAV_MENU_SECTION.classList.add('menu-active');
+    CLOSE_MENU_BUTTON.classList.add('menu-active');
+    NAV_MENU.classList.add('menu-active');
+    BODY.classList.add('popup');
+  }, 4);
+  NAV_MENU_SECTION.classList.add('menu-display-flex');
+}
+
+const closeMenu = function () {
+  console.log("closeMenu")
+  NAV_MENU_SECTION.classList.remove('menu-active');
+  CLOSE_MENU_BUTTON.classList.remove('menu-active');
+  NAV_MENU.classList.remove('menu-active');
+  BODY.classList.remove('popup');
+  setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
+  
+}
+
+BURGER_BUTTON.addEventListener('click', openMenu, false);
+NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
+
+
 
 
 

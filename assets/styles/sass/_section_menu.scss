@@ -1,0 +1,102 @@
+.nav-menu-section {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0);
+  z-index: 300;
+  padding: 0;
+
+  transition: background-color 1s;
+  &.menu-display-flex {
+    display: flex;
+  }
+  &.menu-active {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+
+  .nav-menu {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    height: 329px;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    padding: 10px;
+
+    transition: left 1s;
+
+    &.menu-active {
+      left: 0;
+    }
+
+    a {
+      font-weight: 500;
+      line-height: 140%;
+      color: #333B41;
+      margin: 0 0 15px 0;
+
+      &.active {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #F9804B;
+      }
+
+      &.logo {
+        box-sizing: border-box;
+        width: 66px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px 30px 0;
+        border: 1px solid #FE9013;
+        border-radius: 2px;
+        background: bottom 5px left 7px no-repeat url(../../icons/bamboo_orange.png);
+        color: #FE9013;
+
+        .logo-text {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 120%;
+          text-align: center;
+          margin: 2px 0 0 0;
+        }
+        &:hover, &:active {
+          color: #FE9013;
+          text-shadow: none;
+        }
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 40px;
+    width: 40px;
+    background: no-repeat center url(../../icons/x_icon.png);
+
+    transition: right 1s;
+
+    &.menu-active {
+      right: 0;
+    }
+  }
+
+
+  @include xl {
+    display: none;
+  }
+  @include lg {
+    display: none;
+  }
+  
+}

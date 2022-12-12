@@ -14,7 +14,7 @@ header {
     a {
       font-weight: 500;
       line-height: 140%;
-      @include md-min {
+      @include md {
         display: none;
       }
       @include sm-min {
@@ -42,7 +42,7 @@ header {
         @include lg {
           margin: 0 15px 0 0;
         }
-        @include md-min {
+        @include md {
           width: 47px;
           height: 30px;
           border: none;
@@ -62,7 +62,7 @@ header {
           line-height: 120%;
           text-align: center;
           margin: 2px 0 0 0;
-          @include md-min {
+          @include md {
             font-size: 12px;
           };
           @include sm-min {
@@ -98,11 +98,12 @@ header {
       justify-content: space-between;
       padding: 6px;
       margin-right: -6px;
+      transition: transform 0.1s;
 
-      @include xl-min {
+      @include xl {
         display: none;
       }
-      @include lg-min {
+      @include lg {
         display: none;
       }
       div {
@@ -110,6 +111,9 @@ header {
         height: 2px;
         background: #fff;
         border-radius: 2px;
+      }
+      &:active {
+        transform: rotate(90deg);
       }
     }
 
@@ -125,7 +129,7 @@ header {
   @include lg {
     height: 80px;
   }
-  @include md-min {
+  @include md {
     top: 0;
     height: 34px;
     position: fixed;
