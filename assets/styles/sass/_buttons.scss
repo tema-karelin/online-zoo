@@ -20,7 +20,7 @@
   &:hover {
     background: #E47209;
   }
-  &:disabled {
+  &.disabled, &:disabled, &.disabled:active, &:disabled:active {
     background: #767474;
   }
   &:active {

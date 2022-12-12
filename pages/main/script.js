@@ -27,7 +27,7 @@ function sizeDependences() {
 sizeDependences();
 
 
-
+//!!!!!!!!!!!!!!
 //Fill animals in pets section
 const petsOnPageQuantity = {
   xl: 6,
@@ -72,38 +72,116 @@ let pets = [
     image: "../../assets/images/animals/alligator.jpg",
   },
   { name: "minions",
-    region: "Orlando and your mind :)",
-    foodType: "herbivorous predator",
+    region: "Your heart :)",
+    foodType: "herbivorous",
     image: "../../assets/images/animals/minions.png",
   }
 ];
-let petCard = document.querySelector('.pet-card-container');
-let petCardParent = document.querySelector('.pets-container');
-// let petCardClone = petCard.cloneNode(true);
-for (let i = 1; i<petsOnPageQuantity[userWidth]; i++) {
-  let petCardClone = petCard.cloneNode(true);
-  petCardParent.appendChild(petCardClone);
-}
-let petsImages = document.querySelectorAll('.image');
-let petsDescriptions = document.querySelectorAll('.pets-descr');
-let petsKinds = document.querySelectorAll('.kind-of-animal');
-let petsRegions = document.querySelectorAll('.region');
-// let randomArrToFill = pets.sort(()=>Math.random()-0.5);
-// console.log(randomArrToFill);
-for (let i = 0; i < petsImages.length; i++) {
-  //set image
-  petsImages[i].style.background = "no-repeat center url(" + pets[i].image + ")";
-  petsImages[i].style.backgroundSize = "cover";
-  //fill names
-  petsKinds[i].innerHTML = pets[i].name;
-  //fill regions
-  petsRegions[i].innerHTML = pets[i].region;
-  //fill food types
-  petsDescriptions[i].classList.add(pets[i].foodType);
+
+//creating pet cards
+
+let petCardsParent = document.querySelectorAll('.pets-container');
+let petCards = document.querySelectorAll('.pet-card-container');
+
+for (let i = 0; i<petCardsParent.length; i++) {
+  for (let j = 1; j<petsOnPageQuantity[userWidth]; j++) {
+    let petCardClone = petCards[i].cloneNode(true);
+    petCardsParent[i].appendChild(petCardClone);
+  }
 }
 
 
+//fill the data in pet cards
 
+function randomCardsFilling(cardsNumber) {
+  let petsObjArr = [0, 1, 2, 3, 4, 5, 6, 7] //add numbers if you will add pets in the pets array above
+  //need to create the randomized array from petsObjArr numbers, with length = petsOnPageQuantity[userWidth] (4 or 6) without repeats in result array
+  return petsObjArr.sort(() => Math.random() - 0.5).slice(0, cardsNumber);
+}
+//randomCardsFilling(petsOnPageQuantity[userWidth]);
+
+const petsImages = document.querySelectorAll('.image');
+const petsDescriptions = document.querySelectorAll('.pets-descr');
+const petsKinds = document.querySelectorAll('.kind-of-animal');
+const petsRegions = document.querySelectorAll('.region');
+
+//looping through the slides (3)
+for (let i = 0; i<petCardsParent.length; i++) {
+  fillCards(i, true);
+}
+
+
+function fillCards(slideNumber, random) {
+  const cardsQuantity = petsOnPageQuantity[userWidth];
+  if (random === true) {
+    let randomizeNumbers = randomCardsFilling(cardsQuantity);
+    for (let i = 0; i < cardsQuantity; i++) {
+      //set image
+      petsImages[i + slideNumber*cardsQuantity].style.background = "no-repeat center url(" + pets[randomizeNumbers[i]].image + ")";
+      petsImages[i + slideNumber*cardsQuantity].style.backgroundSize = "cover";
+      //fill names
+      petsKinds[i + slideNumber*cardsQuantity].innerHTML = pets[randomizeNumbers[i]].name;
+      //fill regions
+      petsRegions[i + slideNumber*cardsQuantity].innerHTML = pets[randomizeNumbers[i]].region;
+      //fill food types
+      petsDescriptions[i + slideNumber*cardsQuantity].classList.remove('herbivorous', 'predator');
+      petsDescriptions[i + slideNumber*cardsQuantity].classList.add(pets[randomizeNumbers[i]].foodType);
+    }
+  } else {
+    for (let i = 0; i < cardsQuantity; i++) {
+      //change image
+      petsImages[i + 1*cardsQuantity].style.background = petsImages[i + random*cardsQuantity].style.background;
+      petsImages[i + 1*cardsQuantity].style.backgroundSize = "cover";
+      //change names
+      petsKinds[i + 1*cardsQuantity].innerHTML = petsKinds[i + random*cardsQuantity].innerHTML;
+      //change regions
+      petsRegions[i + 1*cardsQuantity].innerHTML = petsRegions[i + random*cardsQuantity].innerHTML;
+      //change food types
+      petsDescriptions[i + 1*cardsQuantity].classList = petsDescriptions[i + random*cardsQuantity].classList;
+    }
+  }
+  
+}
+
+
+//!!!!!!!!!
+//Pets slider
+
+//Turn to the left or to the right by click
+const SLIDER = document.querySelector('.slide');
+const ARROW_LEFT_BUTTON = document.querySelector('#left-arrow');
+const ARROW_RIGHT_BUTTON = document.querySelector('#right-arrow');
+
+
+ARROW_LEFT_BUTTON.addEventListener('click', petsSlider, false);
+ARROW_RIGHT_BUTTON.addEventListener('click', petsSlider, false);
+
+function petsSlider() {
+  console.log('EVENT')
+  const direction = event.target.classList.contains('right') ? 'to-right' : 'to-left';
+  const directionNum = event.target.classList.contains('right') ? 2 : 0;
+  SLIDER.classList.add(direction);
+  ARROW_LEFT_BUTTON.classList.add('disabled');
+  ARROW_RIGHT_BUTTON.classList.add('disabled');
+  ARROW_LEFT_BUTTON.removeEventListener('click', petsSlider, false);
+  ARROW_RIGHT_BUTTON.removeEventListener('click', petsSlider, false);
+
+  setTimeout(() => {
+    fillCards(1, directionNum);
+    SLIDER.classList.remove(direction);
+    ARROW_LEFT_BUTTON.addEventListener('click', petsSlider, false);
+    ARROW_RIGHT_BUTTON.addEventListener('click', petsSlider, false);
+    ARROW_LEFT_BUTTON.classList.remove('disabled');
+    ARROW_RIGHT_BUTTON.classList.remove('disabled');
+    fillCards(directionNum, true);
+  }, 1000);
+}
+
+
+
+
+
+//!!!!!!!!!!
 //Fill testimonials section
 let testimonials = [
   {
@@ -211,6 +289,38 @@ for (let i = 0; i<testimonials.length; i++) {
   //fill feedback content
   feedbackTexts[i].innerHTML = testimonials[i].feedback;
 }
+
+//!!!!!!!!!!!!
+// Header menu
+const BODY = document.querySelector('body');
+const BURGER_BUTTON = document.querySelector('.burger');
+const NAV_MENU_SECTION = document.querySelector('.nav-menu-section');
+const CLOSE_MENU_BUTTON = document.querySelector('.nav-menu-section .close');
+const NAV_MENU = document.querySelector('.nav-menu');
+
+function openMenu() {
+  console.log("openMenu")
+  setTimeout(() => {
+    NAV_MENU_SECTION.classList.add('menu-active');
+    CLOSE_MENU_BUTTON.classList.add('menu-active');
+    NAV_MENU.classList.add('menu-active');
+    BODY.classList.add('popup');
+  }, 4);
+  NAV_MENU_SECTION.classList.add('menu-display-flex');
+}
+
+function closeMenu() {
+  console.log("closeMenu")
+  NAV_MENU_SECTION.classList.remove('menu-active');
+  CLOSE_MENU_BUTTON.classList.remove('menu-active');
+  NAV_MENU.classList.remove('menu-active');
+  BODY.classList.remove('popup');
+  setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
+  
+}
+
+BURGER_BUTTON.addEventListener('click', openMenu, false);
+NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
 
 
 
