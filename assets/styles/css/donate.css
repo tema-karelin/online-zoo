@@ -840,6 +840,11 @@ header nav .burger:active {
   height: 2px;
   background: #72828e;
 }
+@media (min-width: 321px) and (max-width: 640px) {
+  .pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range #amount-5000, .pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range#amount-2000, .pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range#amount-1000 {
+    display: none !important;
+  }
+}
 .pick-and-feed-donate .feed-container form fieldset.amount .checkbox-range .amount-label {
   width: 62px;
   height: 100px;

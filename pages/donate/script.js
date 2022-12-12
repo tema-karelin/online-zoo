@@ -101,3 +101,14 @@ BURGER_BUTTON.addEventListener('click', openMenu, false);
 NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
 
 
+//remove lables 5000 2000 1000
+if (userWidth == 'lg') {
+  document.querySelector('label[for="amount-5000"]').remove();
+}
+if (userWidth == 'sm' || userWidth == 'md') {
+  document.querySelector('label[for="amount-5000"]').remove();
+  document.querySelector('label[for="amount-2000"]').remove();
+  document.querySelector('label[for="amount-1000"]').remove();
+}
+
+
