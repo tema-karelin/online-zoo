@@ -365,6 +365,7 @@ const FEEDBACK_ELEMENTS = document.querySelectorAll('.feedback-card-container');
 const FEEDBACK_POPUP_SECTION = document.querySelector(".feedback-popup-section");
 const POPUP = document.querySelector(".feedback-popup-section .popup");
 const FEEDBACK_POPUP_CLOSE_BUTTON = document.querySelector(".feedback-popup-section .close");
+const POPUP_FEEDBACK_CONTAINER = document.querySelector('.popup .feedback-card-container');
 
 for (let i = 0; i < FEEDBACK_ELEMENTS.length; i++) {
   FEEDBACK_ELEMENTS[i].addEventListener('click', openPopup, false);
@@ -372,15 +373,19 @@ for (let i = 0; i < FEEDBACK_ELEMENTS.length; i++) {
 
 function openPopup() {
   console.log("openPopup")
+  const targetContainer =  event.target.closest('.feedback-card-container');
+  console.log(targetContainer);
+
   setTimeout(() => {
-    // NAV_MENU_SECTION.classList.add('menu-active');
-    // CLOSE_MENU_BUTTON.classList.add('menu-active');
-    // NAV_MENU.classList.add('menu-active');
-    // FEEDBACK_POPUP_CLOSE_BUTTON.classList.add('popup-active');
     POPUP.classList.add('popup-active');
     FEEDBACK_POPUP_SECTION.classList.add('popup-active');
     BODY.classList.add('popup');
     FEEDBACK_POPUP_SECTION.addEventListener('click', closePopup, false);
+
+    // fill popup window
+    POPUP_FEEDBACK_CONTAINER.innerHTML = targetContainer.innerHTML;
+
+
   }, 4);
   FEEDBACK_POPUP_SECTION.classList.add('popup-display-flex');
 }
