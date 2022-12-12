@@ -85,17 +85,19 @@ function openMenu() {
 }
 
 function closeMenu() {
-  console.log("closeMenu")
-  NAV_MENU_SECTION.classList.remove('menu-active');
-  CLOSE_MENU_BUTTON.classList.remove('menu-active');
-  NAV_MENU.classList.remove('menu-active');
-  BODY.classList.remove('popup');
-  setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
-  
+  if (event.target == NAV_MENU_SECTION || event.target == CLOSE_MENU_BUTTON) {
+    console.log(event.target);
+    console.log(event.target == NAV_MENU_SECTION);
+    console.log(event.target == CLOSE_MENU_BUTTON);
+    NAV_MENU_SECTION.classList.remove('menu-active');
+    CLOSE_MENU_BUTTON.classList.remove('menu-active');
+    NAV_MENU.classList.remove('menu-active');
+    BODY.classList.remove('popup');
+    setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
+  }
 }
 
 BURGER_BUTTON.addEventListener('click', openMenu, false);
 NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
-
 
 
