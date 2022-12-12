@@ -213,54 +213,54 @@ let testimonials = [
     feedback: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Minion",
+    location: "Orlando",
+    time: "few years ago",
+    avatar: "../../assets/images/avatar/minion.jpg",
+    feedback: "Banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana baaaaaaaaaaaaaaaa nnnnnaaaaaaaa aaaaaaaaaa nnnnnnnnnnnnaaaaaaaaaaaaaaaaaaa Banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana baaaaaaaaaaaaaaaa nnnnnaaaaaaaa aaaaaaaaaa nnnnnnnnnnnnaaaaaaaaaaaaaaaaaaa",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Michael John",
+    location: "Local Austria",
+    time: "Today",
+    avatar: "../../assets/images/avatar/user_icon.png",
+    feedback: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Oskar Samborsky",
+    location: "Local Austria",
+    time: "Yesterday",
+    avatar: "../../assets/images/avatar/oskar.png",
+    feedback: "Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br><br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Fredericka Michelin",
+    location: "Local Austria",
+    time: "Yesterday",
+    avatar: "../../assets/images/avatar/fredericka.png",
+    feedback: "The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Mila Riksha",
+    location: "Local Austria",
+    time: "Yesterday",
+    avatar: "../../assets/images/avatar/mila.png",
+    feedback: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
+    name: "Minion",
+    location: "Orlando",
+    time: "few years ago",
+    avatar: "../../assets/images/avatar/minion.jpg",
+    feedback: "Banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana baaaaaaaaaaaaaaaa nnnnnaaaaaaaa aaaaaaaaaa nnnnnnnnnnnnaaaaaaaaaaaaaaaaaaa Banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana banana baaaaaaaaaaaaaaaa nnnnnaaaaaaaa aaaaaaaaaa nnnnnnnnnnnnaaaaaaaaaaaaaaaaaaa",
   },
   {
-    name: "",
-    location: "",
-    time: "",
-    avatar: "../../assets/images/avatar/",
-    feedback: "",
-  }
+    name: "Mila Riksha",
+    location: "Local Austria",
+    time: "Yesterday",
+    avatar: "../../assets/images/avatar/mila.png",
+    feedback: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.",
+  },
 ];
 
 let feedback = document.querySelector('.feedback');
@@ -310,12 +310,18 @@ function openMenu() {
 }
 
 function closeMenu() {
-  console.log("closeMenu")
-  NAV_MENU_SECTION.classList.remove('menu-active');
-  CLOSE_MENU_BUTTON.classList.remove('menu-active');
-  NAV_MENU.classList.remove('menu-active');
-  BODY.classList.remove('popup');
-  setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
+  if (event.target == NAV_MENU_SECTION || event.target == NAV_MENU_SECTION) {
+    console.log(event.target);
+    console.log(event.target == NAV_MENU_SECTION);
+    console.log(event.target == CLOSE_MENU_BUTTON);
+    NAV_MENU_SECTION.classList.remove('menu-active');
+    CLOSE_MENU_BUTTON.classList.remove('menu-active');
+    NAV_MENU.classList.remove('menu-active');
+    BODY.classList.remove('popup');
+    setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
+  }
+
+  
   
 }
 
@@ -323,7 +329,69 @@ BURGER_BUTTON.addEventListener('click', openMenu, false);
 NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
 
 
+//!! testimonials range slider
 
+// for (let e of document.querySelectorAll('input[type="range"].scrollbar')) {
+  // e.style.setProperty('--value', e.value);
+  // e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  // e.style.setProperty('--max', e.max == '' ? '10' : e.max);
+  // e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+// }
 
+const INPUT_RANGE = document.querySelector('input[type="range"]');
+const FEEDBACK_SLIDER = document.querySelector('.feedback');
+const FEEDBACK_1ST_EL = document.querySelector('.feedback-card-container');
 
+if (userWidth === 'xl') {
+  INPUT_RANGE.setAttribute("max", "7");
+} else {
+  INPUT_RANGE.setAttribute("max", "8");
+};
 
+function rangeScroll() {
+  const elStyle = window.getComputedStyle(FEEDBACK_1ST_EL);
+  const elWidth = +elStyle.width.slice(0, -2) + +elStyle.marginRight.slice(0, -2);
+  console.log("WIDTH ", elWidth)
+  const position = "" + (-INPUT_RANGE.value*elWidth) +"px";
+  console.log("POSITION ", position);
+  FEEDBACK_1ST_EL.style.marginLeft = position;
+}
+
+INPUT_RANGE.addEventListener('input', rangeScroll, false);
+
+//testimonials popup
+
+const FEEDBACK_ELEMENTS = document.querySelectorAll('.feedback-card-container');
+const FEEDBACK_POPUP_SECTION = document.querySelector(".feedback-popup-section");
+const POPUP = document.querySelector(".feedback-popup-section .popup");
+const FEEDBACK_POPUP_CLOSE_BUTTON = document.querySelector(".feedback-popup-section .close");
+
+for (let i = 0; i < FEEDBACK_ELEMENTS.length; i++) {
+  FEEDBACK_ELEMENTS[i].addEventListener('click', openPopup, false);
+};
+
+function openPopup() {
+  console.log("openPopup")
+  setTimeout(() => {
+    // NAV_MENU_SECTION.classList.add('menu-active');
+    // CLOSE_MENU_BUTTON.classList.add('menu-active');
+    // NAV_MENU.classList.add('menu-active');
+    // FEEDBACK_POPUP_CLOSE_BUTTON.classList.add('popup-active');
+    POPUP.classList.add('popup-active');
+    FEEDBACK_POPUP_SECTION.classList.add('popup-active');
+    BODY.classList.add('popup');
+    FEEDBACK_POPUP_SECTION.addEventListener('click', closePopup, false);
+  }, 4);
+  FEEDBACK_POPUP_SECTION.classList.add('popup-display-flex');
+}
+
+function closePopup() {
+  if (event.target == FEEDBACK_POPUP_SECTION || event.target == FEEDBACK_POPUP_CLOSE_BUTTON) {
+    console.log(event.target);
+    POPUP.classList.remove('popup-active');
+    FEEDBACK_POPUP_SECTION.classList.remove('popup-active');
+    BODY.classList.remove('popup');
+    FEEDBACK_POPUP_SECTION.removeEventListener('click', closePopup, false);
+    setTimeout(() => FEEDBACK_POPUP_SECTION.classList.remove('popup-display-flex'), 1000);
+  }
+}
