@@ -320,9 +320,6 @@ function closeMenu() {
     BODY.classList.remove('popup');
     setTimeout(() => NAV_MENU_SECTION.classList.remove('menu-display-flex'), 1000);
   }
-
-  
-  
 }
 
 BURGER_BUTTON.addEventListener('click', openMenu, false);
