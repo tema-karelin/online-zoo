@@ -360,43 +360,44 @@ function rangeScroll() {
 INPUT_RANGE.addEventListener('input', rangeScroll, false);
 
 //testimonials popup
+if (userWidth == 'md' || userWidth == 'sm') {
+  const FEEDBACK_ELEMENTS = document.querySelectorAll('.feedback-card-container');
+  const FEEDBACK_POPUP_SECTION = document.querySelector(".feedback-popup-section");
+  const POPUP = document.querySelector(".feedback-popup-section .popup");
+  const FEEDBACK_POPUP_CLOSE_BUTTON = document.querySelector(".feedback-popup-section .close");
+  const POPUP_FEEDBACK_CONTAINER = document.querySelector('.popup .feedback-card-container');
 
-const FEEDBACK_ELEMENTS = document.querySelectorAll('.feedback-card-container');
-const FEEDBACK_POPUP_SECTION = document.querySelector(".feedback-popup-section");
-const POPUP = document.querySelector(".feedback-popup-section .popup");
-const FEEDBACK_POPUP_CLOSE_BUTTON = document.querySelector(".feedback-popup-section .close");
-const POPUP_FEEDBACK_CONTAINER = document.querySelector('.popup .feedback-card-container');
+  for (let i = 0; i < FEEDBACK_ELEMENTS.length; i++) {
+    FEEDBACK_ELEMENTS[i].addEventListener('click', openPopup, false);
+  };
 
-for (let i = 0; i < FEEDBACK_ELEMENTS.length; i++) {
-  FEEDBACK_ELEMENTS[i].addEventListener('click', openPopup, false);
-};
+  function openPopup() {
+    console.log("openPopup")
+    const targetContainer =  event.target.closest('.feedback-card-container');
+    console.log(targetContainer);
 
-function openPopup() {
-  console.log("openPopup")
-  const targetContainer =  event.target.closest('.feedback-card-container');
-  console.log(targetContainer);
+    setTimeout(() => {
+      POPUP.classList.add('popup-active');
+      FEEDBACK_POPUP_SECTION.classList.add('popup-active');
+      BODY.classList.add('popup');
+      FEEDBACK_POPUP_SECTION.addEventListener('click', closePopup, false);
 
-  setTimeout(() => {
-    POPUP.classList.add('popup-active');
-    FEEDBACK_POPUP_SECTION.classList.add('popup-active');
-    BODY.classList.add('popup');
-    FEEDBACK_POPUP_SECTION.addEventListener('click', closePopup, false);
-
-    // fill popup window
-    POPUP_FEEDBACK_CONTAINER.innerHTML = targetContainer.innerHTML;
+      // fill popup window
+      POPUP_FEEDBACK_CONTAINER.innerHTML = targetContainer.innerHTML;
 
 
-  }, 4);
-  FEEDBACK_POPUP_SECTION.classList.add('popup-display-flex');
-}
+    }, 4);
+    FEEDBACK_POPUP_SECTION.classList.add('popup-display-flex');
+  }
 
-function closePopup() {
-  if (event.target == FEEDBACK_POPUP_SECTION || event.target == FEEDBACK_POPUP_CLOSE_BUTTON) {
-    console.log(event.target);
-    POPUP.classList.remove('popup-active');
-    FEEDBACK_POPUP_SECTION.classList.remove('popup-active');
-    BODY.classList.remove('popup');
-    FEEDBACK_POPUP_SECTION.removeEventListener('click', closePopup, false);
-    setTimeout(() => FEEDBACK_POPUP_SECTION.classList.remove('popup-display-flex'), 1000);
+  function closePopup() {
+    if (event.target == FEEDBACK_POPUP_SECTION || event.target == FEEDBACK_POPUP_CLOSE_BUTTON) {
+      console.log(event.target);
+      POPUP.classList.remove('popup-active');
+      FEEDBACK_POPUP_SECTION.classList.remove('popup-active');
+      BODY.classList.remove('popup');
+      FEEDBACK_POPUP_SECTION.removeEventListener('click', closePopup, false);
+      setTimeout(() => FEEDBACK_POPUP_SECTION.classList.remove('popup-display-flex'), 1000);
+    }
   }
 }
