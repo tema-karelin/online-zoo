@@ -1311,7 +1311,7 @@ footer .container .designed-by:active {
 .arounded-button:hover, .squared-button:hover {
   background: #E47209;
 }
-.arounded-button:disabled, .squared-button:disabled {
+.arounded-button.disabled, .disabled.squared-button, .arounded-button:disabled, .squared-button:disabled, .arounded-button.disabled:active, .arounded-button:disabled:active {
   background: #767474;
 }
 .arounded-button:active, .squared-button:active {

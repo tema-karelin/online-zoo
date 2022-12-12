@@ -907,6 +907,7 @@ header nav .burger:active {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow-x: hidden;
 }
 .backstage-and-pets .pets-section .pets-slider {
   position: relative;
@@ -934,6 +935,37 @@ header nav .burger:active {
   .backstage-and-pets .pets-section .pets-slider {
     height: 1388px;
     margin: 40px 0 20px 0;
+  }
+}
+.backstage-and-pets .pets-section .pets-slider .slide {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  right: -100%;
+}
+.backstage-and-pets .pets-section .pets-slider .slide.to-left {
+  right: 0;
+  animation: to-left 1s;
+}
+.backstage-and-pets .pets-section .pets-slider .slide.to-right {
+  right: -200%;
+  animation: to-right 1s;
+}
+@keyframes to-right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes to-left {
+  from {
+    right: -100%;
+  }
+  to {
+    right: -200%;
   }
 }
 .backstage-and-pets .pets-section .pets-slider .pets-container {
@@ -972,16 +1004,6 @@ header nav .burger:active {
   .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container {
     width: 285px;
     height: 332px;
-  }
-}
-@media (min-width: 640px) and (max-width: 999px) {
-  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container:nth-last-child(-n+2) {
-    display: none;
-  }
-}
-@media (min-width: 0px) and (max-width: 639px) {
-  .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container:nth-last-child(-n+2) {
-    display: none;
   }
 }
 .backstage-and-pets .pets-section .pets-slider .pets-container .pet-card-container .pet-card-overlayer {
@@ -2040,7 +2062,7 @@ footer .container .designed-by:active {
 .arounded-button:hover, .squared-button:hover {
   background: #E47209;
 }
-.arounded-button:disabled, .squared-button:disabled {
+.arounded-button.disabled, .disabled.squared-button, .arounded-button:disabled, .squared-button:disabled, .arounded-button.disabled:active, .arounded-button:disabled:active {
   background: #767474;
 }
 .arounded-button:active, .squared-button:active {
