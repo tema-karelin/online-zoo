@@ -310,7 +310,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  if (event.target == NAV_MENU_SECTION || event.target == NAV_MENU_SECTION) {
+  if (event.target == NAV_MENU_SECTION || event.target == CLOSE_MENU_BUTTON) {
     console.log(event.target);
     console.log(event.target == NAV_MENU_SECTION);
     console.log(event.target == CLOSE_MENU_BUTTON);
@@ -330,13 +330,6 @@ NAV_MENU_SECTION.addEventListener('click', closeMenu, false);
 
 
 //!! testimonials range slider
-
-// for (let e of document.querySelectorAll('input[type="range"].scrollbar')) {
-  // e.style.setProperty('--value', e.value);
-  // e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-  // e.style.setProperty('--max', e.max == '' ? '10' : e.max);
-  // e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-// }
 
 const INPUT_RANGE = document.querySelector('input[type="range"]');
 const FEEDBACK_SLIDER = document.querySelector('.feedback');
