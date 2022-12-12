@@ -26,6 +26,8 @@ function sizeDependences() {
 };
 sizeDependences();
 
+
+// Pick and Feed Interactivity
 let amountElement = document.querySelector('.amount-checkbox:checked');
 let amount = 0 || Number(amountElement.value);
 
@@ -37,6 +39,7 @@ function amountCheck() {
   if (event.target.name === "amount-checkbox") {
     amount = +event.target.value;
     console.log('Amount value chenged by radio:', amount);
+    document.querySelector('#another-amount').value = amount;
   } else {
     let inputAmount = Number(document.querySelector('#another-amount').value);
     if (inputAmount < 10000 && inputAmount >= 1) {
