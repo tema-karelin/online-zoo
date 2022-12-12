@@ -1504,6 +1504,12 @@ header nav .burger:active {
   justify-content: flex-start;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container {
+    max-width: 940px;
+  }
 }
 @media (min-width: 321px) and (max-width: 640px) {
   .testimonials .container {
@@ -1527,7 +1533,7 @@ header nav .burger:active {
   margin: 14px 0 0 0;
 }
 .testimonials .container .feedback {
-  width: 100%;
+  width: 1000%;
   display: flex;
   justify-content: flex-start;
   overflow-x: scroll;
@@ -1542,6 +1548,7 @@ header nav .burger:active {
 @media (min-width: 321px) and (max-width: 640px) {
   .testimonials .container .feedback {
     flex-direction: column;
+    width: 100%;
     height: 357px;
     margin: 44px 0 40px 0;
     overflow-y: scroll;
@@ -1551,6 +1558,7 @@ header nav .burger:active {
 @media (min-width: 0px) and (max-width: 320px) {
   .testimonials .container .feedback {
     flex-direction: column;
+    width: 100%;
     height: 357px;
     margin: 25px 0 30px 0;
     overflow-y: scroll;
@@ -1567,6 +1575,7 @@ header nav .burger:active {
   background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   border-radius: 20px;
   margin: 0 29px 0 0;
+  transition: margin 0.5s;
 }
 @media (min-width: 641px) and (max-width: 1000px) {
   .testimonials .container .feedback .feedback-card-container {
@@ -1650,6 +1659,7 @@ header nav .burger:active {
   width: 0;
 }
 .testimonials .container .scrollbar-container {
+  position: relative;
   width: 600px;
   height: 8px;
   align-self: center;
@@ -1673,6 +1683,7 @@ header nav .burger:active {
   }
 }
 .testimonials .container .scrollbar-container .scrollbar {
+  position: absolute;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -1680,9 +1691,41 @@ header nav .burger:active {
   border-radius: 20px;
   background-clip: padding-box;
   background-color: #f1f3f2;
+  margin: 10px 0 10px 0;
+  top: -10px;
+  -webkit-appearance: none;
 }
-.testimonials .container .scrollbar-container .scrollbar:hover {
-  background: linear-gradient(0deg, rgba(241, 243, 242, 0) 0%, rgb(241, 243, 242) 25%, rgb(241, 243, 242) 75%, rgba(241, 243, 242, 0) 100%);
+.testimonials .container .scrollbar-container .scrollbar:focus {
+  outline: none;
+}
+.testimonials .container .scrollbar-container .scrollbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 115px;
+  height: 6px;
+  border-radius: 5px;
+  background: #fe9013;
+  border: solid transparent 1px;
+  box-shadow: 0 0 2px black;
+  margin: 10px 0 10px 0;
+}
+.testimonials .container .scrollbar-container .scrollbar::-webkit-slider-thumb:hover {
+  background: #db7500;
+}
+.testimonials .container .scrollbar-container .scrollbar::-webkit-slider-thumb:active {
+  background: #4b9200;
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .testimonials .container .scrollbar-container .scrollbar::-webkit-slider-thumb {
+    width: 75px;
+  }
+}
+.testimonials .container .scrollbar-container .scrollbar::-webkit-slider-runnable-track, .testimonials .container .scrollbar-container .scrollbar::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: #f1f3f2;
 }
 .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb {
   box-sizing: border-box;
@@ -1701,6 +1744,127 @@ header nav .burger:active {
 @media (min-width: 641px) and (max-width: 1000px) {
   .testimonials .container .scrollbar-container .scrollbar .scrollbar-thumb {
     width: 75px;
+  }
+}
+
+.feedback-popup-section {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 300;
+  padding: 0 20px;
+  transition: background-color 1s;
+}
+.feedback-popup-section.popup-display-flex {
+  display: flex;
+  align-items: center;
+}
+.feedback-popup-section.popup-active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.feedback-popup-section .popup {
+  position: relative;
+  width: 100%;
+  height: 428px;
+  background-color: rgb(245, 247, 246);
+  border-radius: 4px;
+  padding: 40px 40px 20px 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.feedback-popup-section .popup.popup-active {
+  opacity: 100%;
+}
+.feedback-popup-section .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  background: no-repeat center url(../../icons/x_icon.png);
+}
+.feedback-popup-section .feedback-card-container {
+  min-width: 268px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  border-radius: 20px;
+  margin: 0 0 0 0;
+}
+.feedback-popup-section .feedback-card-container .feedback-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: #f1f3f2;
+  background-clip: padding-box;
+  padding: 15px;
+}
+@media (min-width: 321px) and (max-width: 640px) {
+  .feedback-popup-section .feedback-card-container .feedback-card {
+    overflow-y: scroll;
+  }
+  .feedback-popup-section .feedback-card-container .feedback-card::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .feedback-popup-section .feedback-card-container .feedback-card {
+    padding: 8px 10px 0 10px;
+    overflow-y: scroll;
+  }
+  .feedback-popup-section .feedback-card-container .feedback-card::-webkit-scrollbar {
+    display: none;
+  }
+}
+.feedback-popup-section .feedback-card-container .feedback-card .feedback-card-header {
+  width: 100%;
+  height: 37px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 11px 0;
+}
+.feedback-popup-section .feedback-card-container .feedback-card .feedback-card-header .avatar {
+  width: 37px;
+  height: 37px;
+  border-radius: 100%;
+  background: url(../../images/avatar/user_icon.png);
+  margin-right: 10px;
+}
+.feedback-popup-section .feedback-card-container .feedback-card .feedback-card-header p.name {
+  font-weight: 400;
+  color: #000;
+}
+.feedback-popup-section .feedback-card-container .feedback-card .feedback-card-header p.info {
+  color: #bdbdbd;
+}
+.feedback-popup-section .feedback-card-container .feedback-card p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #767474;
+}
+.feedback-popup-section .feedback-card-container .feedback-card p.feedback-text {
+  height: 308px;
+  overflow-y: scroll;
+}
+.feedback-popup-section .feedback-card-container .feedback-card p.feedback-text::-webkit-scrollbar {
+  width: 0;
+}
+@media (min-width: 1001px) {
+  .feedback-popup-section {
+    display: none;
+  }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .feedback-popup-section {
+    display: none;
   }
 }
 

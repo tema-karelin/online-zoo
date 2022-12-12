@@ -1,0 +1,149 @@
+.feedback-popup-section {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0);
+  z-index: 300;
+  padding: 0 20px;
+
+  transition: background-color 1s;
+  &.popup-display-flex {
+    display: flex;
+    align-items: center;
+  }
+  &.popup-active {
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+
+  .popup {
+    position: relative;
+    width: 100%;
+    height: 428px;
+    background-color: rgba(245, 247, 246, 1);
+    border-radius: 4px;
+    padding: 40px 40px 20px 20px;
+    opacity: 0;
+
+    transition: opacity 1s;
+
+    &.popup-active {
+      opacity: 100%;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background: no-repeat center url(../../icons/x_icon.png);
+
+    // transition: right 1s;
+
+    // &.popup-active {
+    //   right: 0;
+    // }
+  }
+
+  .feedback-card-container {
+    min-width: 268px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      ),
+      linear-gradient(
+        315.75deg,
+        rgba(254, 189, 171, 0.74) 30.06%,
+        rgba(243, 169, 248, 0.66) 50.74%,
+        #e0d8f0 80.49%,
+        #eaf7fe 127.9%,
+        #eaf7fe 149.54%
+      );
+    border-radius: 20px;
+    margin: 0 0 0 0;
+
+    .feedback-card {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      background-color: #f1f3f2;
+      background-clip: padding-box;
+      padding: 15px;
+
+      @include md {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      @include sm {
+        padding: 8px 10px 0 10px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .feedback-card-header {
+        width: 100%;
+        height: 37px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 11px 0;
+
+        .avatar {
+          width: 37px;
+          height: 37px;
+          border-radius: 100%;
+          background: url(../../images/avatar/user_icon.png);
+          margin-right: 10px;
+        }
+        p.name {
+          font-weight: 400;
+          color: #000;
+        }
+        p.info {
+          color: #bdbdbd;
+        }
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #767474;
+        &.feedback-text {
+          height: 308px;
+          overflow-y: scroll;
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  @include xl {
+    display: none;
+  }
+  @include lg {
+    display: none;
+  }
+  
+}
